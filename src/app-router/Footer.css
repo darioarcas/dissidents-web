@@ -1,0 +1,166 @@
+
+
+.footer{
+    padding-top: 80px;
+    background-color: rgb(17, 17, 17);
+    height: 100%;
+}
+.footer ul{
+    padding: 0;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media(max-width: 580px){
+    .footer ul{
+        width: 75%;
+    }
+}
+
+.footer li{ 
+    display: flex;
+    justify-content: center;
+    width: 90%;   
+    margin: 0 auto;
+}
+
+.footer svg, .color-svg{
+    fill: rgb(255, 255, 255);
+    transition: 0.2s ease-in-out;
+}
+
+.footer svg:hover, .color-svg:hover{
+    fill: rgb(245, 255, 103);
+}
+
+
+
+
+
+.section-logo{
+    width: 100%;
+}
+
+.footer-direccion{
+    color: rgb(146, 146, 146);
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.1s;
+    margin-top: 20px;
+}
+.footer-direccion:hover {
+    color: rgb(228, 228, 228);
+}
+
+.footer-contacto{
+    color: rgb(146, 146, 146);
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.navegacion-footer{
+    margin: 0 14%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width:700px){
+    .navegacion-footer{
+        flex-direction: column;
+    }
+    .section-logo{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+.footer-hr{
+    width: 75%;
+    margin: 10px auto;
+    border-width: 2px;
+    border-radius: 1px;
+    font-weight: 400;
+    color: rgb(167, 167, 167);
+}
+
+
+
+
+.footer-logo-completo{
+    width: 60px;
+    filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(180deg);
+
+}
+
+.logo-groove-footer-recortado{
+    width: 45px;
+    height: 15px;
+    margin: 5px 3px auto 0;
+    filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(180deg);
+}
+.footer-logo-fecha{
+    margin: 30px auto 0 auto;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+
+
+
+
+
+/* Tamaños SVG */
+.svg-youtube{
+    width: 30px;
+    height: 30px;
+}
+.svg-instagram{
+    width: 26px; 
+    height: 26px;
+}
+.svg-email{
+    width: 25px;
+    height: 25px;
+}
+.svg-beatport{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+@media(max-width: 700px){
+    /* Tamaños SVG */
+    .svg-youtube{
+        width: 48px;
+        height: 48px;
+    }
+    .svg-instagram{
+        width: 40px; 
+        height: 40px;
+    }
+    .svg-email{
+        width: 36px;
+        height: 36px;
+    }
+    .svg-beatport{
+        width: 28px;
+        height: 28px;
+    }
+}

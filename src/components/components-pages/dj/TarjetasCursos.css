@@ -1,0 +1,188 @@
+
+.sombra{
+    
+    box-shadow: 0 0 12px rgba(175, 175, 175, 0.849); /* Sombra difusa */
+}
+
+
+.card{
+    border: none, !important;
+}
+
+/* .container{
+    display: flex;
+    justify-content: center;
+} */
+@media(max-width: 580px){
+    .container{
+        width: 90%;
+    }
+}
+
+
+
+
+.ancho-maximo{
+    max-width: 92%;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media(max-width: 990px){
+    .ancho-maximo{
+        max-width: 100%;
+    }
+}
+
+
+
+
+.card-text {
+    display: -webkit-box;              /* Establece el contenedor como un box flexible */
+    -webkit-line-clamp: 3;             /* Limita el texto a 3 líneas */
+    -webkit-box-orient: vertical;      /* Asegura que la orientación sea vertical */
+    overflow: hidden;                  /* Oculta el texto que excede el límite */
+    text-overflow: ellipsis;           /* Muestra "..." al final del texto truncado */
+    color: rgb(212, 212, 212);
+    font-weight: 300;
+}
+
+
+
+.tarjeta{
+    width: 100%;
+    height: 150px;
+}
+
+
+
+.tarjeta-youtube{
+    width: 100%;
+    height: 300px;
+}
+
+@media(max-width: 580px){
+    .tarjeta{
+        width: 100%;
+        height: auto;
+    }
+    .tarjeta-youtube{
+        width: 100%;
+        height: 200px;
+    }
+}
+
+
+.card-title{
+    color: rgb(255, 255, 255);
+}
+  
+  
+
+
+
+
+
+
+/* IMAGENES ON-DEMAND */
+.curso-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.curso-wrapper:hover {
+  transform: scale(1.03);
+}
+
+
+.div-curso {
+  min-width: 200px;
+  box-shadow: 0 0px 7px rgba(255, 255, 255, 1);
+  border-radius:5px;
+  overflow: hidden;
+}
+
+.curso-fondo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Transparencia de la imagen */
+  z-index: 1;
+  overflow: hidden;
+  filter: saturate(1.8);  /*invert(1)🔧 Ajusta la saturación aquí */
+}
+
+.curso-fondo::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(0px);
+  z-index: 0;
+}
+
+/* 🔳 Capa negra oscura tipo viñeta */
+.curso-vignettee {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(
+    circle, 
+    rgba(12, 12, 12, 0.116) 10%,  /* centro claro */
+    rgba(0, 0, 0, 0.397) 100%  /* bordes oscuros */
+  );
+  pointer-events: none; /* deja pasar clics al link debajo */
+}
+
+.curso-contenido {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 90%;
+
+}
+
+.curso-titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.curso-vermas {
+  font-size: 1rem;
+  font-weight: 400;
+  text-shadow: 0 0px 8px rgb(179, 179, 179);
+}
+
+
+
+.glass-efecto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;       /* Puedes ajustar el ancho aquí */
+  height: 70%;     /* Y también la altura */
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 0px;
+  z-index: 2;
+}
+

@@ -1,0 +1,36 @@
+.youtube-wrapper {
+  position: relative;
+  width: 640px;
+  height: 390px;
+  overflow: hidden;
+}
+
+.youtube-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Oculta botón de suscribirse y compartir (arriba a la derecha) */
+.overlay-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 50px;
+  background-color: black; /* o background de tu app */
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Oculta logo de YouTube (abajo a la derecha) */
+.overlay-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  height: 40px;
+  background-color: black;
+  z-index: 10;
+  pointer-events: none;
+}

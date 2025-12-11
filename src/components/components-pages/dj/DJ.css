@@ -1,0 +1,249 @@
+/* 
+
+.imagen{
+    background-size: cover; 
+    background-position: center;
+    width:100%;
+    height:500px;
+    position:relative;
+    } */
+    
+    
+    
+.texto-header .texto-xxl{
+    font-size: 35px;
+    font-weight: 600;
+}
+.texto-header{
+    background-color: #1b1b1b;
+    opacity: 100%;
+    width: 100%;
+    /* position: absolute; */
+    color: rgb(236, 236, 236);
+    z-index: 2;
+    /* top: 25%; */
+    margin-top: 55px;
+    padding: 55px 0 55px 0;
+}
+
+.text-info{
+    color: #0dcaf0;
+}
+
+.texto-header img{
+    opacity: 100%;
+    width: 45%;
+    z-index: 2;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.5); /* Sombra difusa */
+
+}
+
+@media(max-width: 580px){
+    .texto-header img{
+        width: 75%;
+    }
+}
+
+.texto-header h1{
+    font-weight: bold;
+    font-size: xx-large;
+}
+.texto-header h1, h6{
+    max-width: 73%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: 0 auto;
+    text-align: start;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 17); /* Sombra difusa */
+}
+
+
+
+
+@media(max-width:580px){
+    .texto-header h1, h6{
+        width: 75%;
+    }
+}
+
+.overlay-img{
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    bottom: 0px; 
+     /* Capa de tinte negro con 10% de opacidad */
+     background-color: rgba(0, 0, 0, 0.438); 
+     /* Asegura que la capa de tinte esté encima de la imagen  */
+     z-index: 2;
+}
+
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* 👈 Esta opacidad solo afecta la imagen */
+  z-index: 0;
+}
+
+
+
+
+
+
+
+
+/* Curso.js */
+
+.contenido-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenido-header a{
+    width: 230px;
+    margin-top: 60px;
+    font-weight: bold;
+    background-color: rgb(25, 240, 89);
+    transition: 0.1s ease-in-out;
+}
+
+
+
+.contenido-header a:hover{
+    color: rgb(10, 255, 255);
+    background-color: rgb(17, 136, 53);
+}
+
+
+
+.titulo-body{
+    font-size: large;
+    font-weight: 300;
+    /* text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.521); */
+}
+
+
+.contenedor-body{
+    /* display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between; */
+    width: 65%;
+    margin: 50px auto 0 auto;
+}
+
+
+@media(max-width: 900px){
+    .contenedor-body{
+        flex-direction: column;
+        width: 45%;
+    }
+    .imagen-secundaria{
+        width: 100%;
+    }
+}
+@media(max-width: 580px){
+    .contenedor-body{
+        flex-direction: column;
+        width: 80%;
+    }
+}
+
+.contenedor-body ul{
+    color: rgb(92, 92, 92);
+    font-weight: 500;
+    font-size: small;
+    padding: 0;
+}
+
+
+.imagen-secundaria{
+    width: 50%;
+    height: 50%;
+}
+@media(max-width: 900px){
+    .imagen-secundaria{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+
+.contenedor-body section{
+    width: 45%;
+    margin-left: 20px;
+}
+@media(max-width: 900px){
+    .contenedor-body section{
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+
+.contenedor-temario{
+    margin: 50px auto 0 auto;
+    width: 65%;
+}
+
+.contenedor-temario ul{
+    color: rgb(92, 92, 92);
+    font-weight: 500;
+    font-size: small;
+}
+
+@media(max-width: 900px){
+    .contenedor-temario{
+        width: 45%;
+    }
+}
+@media(max-width: 580px){
+    .contenedor-temario{
+        width: 80%;
+    }
+}
+
+
+.overlay-img-secundario{
+    /* Capa de tinte negro con 10% de opacidad */
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+
+.galeria-img section{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.galeria-img img{
+    background-color: aliceblue;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.ancho-galeria{
+    width: 80%;
+}
+
+
+/* .ancho-galeria div{
+    width: 80%;
+} */
+@media(max-width: 580px){
+    .ancho-galeria div{
+        padding: 0;
+        margin: 0;
+    }
+}

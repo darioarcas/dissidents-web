@@ -1,0 +1,33 @@
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.front {
+    z-index: 2;
+  }
+  
+  .slide.back {
+    z-index: 1;
+  }
+  
+  .slide.fade-out {
+    opacity: 0;
+  }
+  
+  .slide.fade-in {
+    opacity: 1;
+  }
+  

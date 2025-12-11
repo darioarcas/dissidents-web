@@ -1,0 +1,57 @@
+
+
+.fuente-groove {
+  font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 83px;
+  /* letter-spacing: 1px; */
+}
+
+
+
+.contenedor{
+    width: 65%;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    /* border-radius: 5px; */
+    padding: 30px;
+}
+
+@media(max-width: 580px){
+    .contenedor{
+        width: 80%;
+        padding: 10px;
+    }
+    .seccion-principal{
+        width: 65%;
+    }
+}
+
+
+.seccion-principal{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+
+.seccion-principal h3{
+    /* color: rgb(34, 34, 34); */
+    font-weight: 500;
+    font-size: large;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+
+}
+
+@media(max-width: 580px){
+    .seccion-principal h3{
+        padding: 20px 0 0 0;
+    }
+}

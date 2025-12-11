@@ -1,0 +1,126 @@
+/* Contenedor del slider */
+.slider-container {
+    position: relative;
+    overflow: hidden; /* Ocultar las tarjetas que se salen del contenedor */
+    width: 75%; /* El contenedor debe ocupar todo el ancho disponible */
+}
+
+@media (max-width:800px) {
+    .slider-container {
+        width: 100%; /* El contenedor debe ocupar todo el ancho disponible */
+    }
+}
+
+/* Estilo de la fila de tarjetas */
+.slider {
+    display: flex; /* Usa Flexbox para alinear las tarjetas */
+    transition: transform 0.5s ease; /* Transición suave para el desplazamiento */
+    width: 100%; /* El contenedor toma el 100% de su ancho */
+    height: auto;
+}
+
+/* Solucionamos el overflow en el slider para evitar que se recorten las tarjetas */
+.slider-container .slider {
+    overflow: visible; /* Para asegurarnos que las tarjetas no se recorten */
+    width: 100%; /* Asegura que el contenedor se ajuste al 100% del ancho disponible */
+    display: flex;
+}
+
+/* Cada tarjeta */
+.slider-item {
+    flex-shrink: 0; /* Evitar que las tarjetas se encojan */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    width: 375px; /* Ancho por defecto en pantallas pequeñas */
+}
+
+/* Estilos para cuando estamos en resoluciones más grandes (más de 1024px) */
+@media (min-width: 1024px) {
+    .slider-item {
+        width: 8.7%; /* 40% de la pantalla para cada tarjeta (dos tarjetas por fila) */
+    }
+}
+
+/* Estilo de las imágenes dentro de las tarjetas */
+.card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 250px; /* Altura fija para las imágenes */
+}
+@media (max-width: 970px) {
+    .card-img-top {
+        object-fit: cover;
+        width: 100%;
+        height: 250px; /* Altura fija para las imágenes */
+    }
+}
+
+/* Estilo de los botones de navegación */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-button.prev {
+    left: 10px;
+}
+
+.slider-button.next {
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+/* De TarjetasCursos */
+
+
+.sombra{
+    
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.2); /* Sombra difusa */
+}
+
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.tarjeta{
+    width: 100%;
+    height: 10px;
+}
+
+
+
+@media(max-width: 580px){
+    .tarjeta{
+        width: 100%;
+        height: 10px;
+    }
+}
+
+.btn:hover{
+    background-color: rgb(94, 94, 94) !important;
+    color: rgb(255, 255, 255) !important;
+    transition: .3s;
+}
+  
+  

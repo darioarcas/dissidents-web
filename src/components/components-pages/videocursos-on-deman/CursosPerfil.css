@@ -1,0 +1,74 @@
+.paginacion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.numeros-pagina {
+  color: blanchedalmond;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre los números de página */
+}
+
+/* Estilo común para los botones de los números de página */
+.numeros-pagina button {
+  padding: 5px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para el botón de la página activa */
+.numeros-pagina button.activo {
+  background-color: #50a4ff;
+  color: white;
+  font-weight: bold;
+}
+
+/* Efecto hover */
+.numeros-pagina button:hover {
+  background-color: #444444;
+  color: rgb(0, 0, 0);
+}
+
+/* Estilo para los botones deshabilitados */
+button:disabled {
+  display: none;
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Media query para pantallas grandes (mayores a 768px) */
+@media (min-width: 768px) {
+  /* Mostrar todos los números de página */
+  .numeros-pagina {
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .numeros-pagina button {
+    padding: 8px 12px;
+  }
+}
+
+/* Media query para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+  .numeros-pagina {
+    gap: 10px; /* Aumentamos el espacio para que no se amontonen */
+    justify-content: center;
+  }
+
+  /* Los números de página tendrán un tamaño más pequeño en pantallas pequeñas */
+  .numeros-pagina button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  /* Los puntos (...) deben estar visibles, pero no serán clickeables */
+  .numeros-pagina button[disabled] {
+    background-color: transparent;
+    cursor: default;
+  }
+}

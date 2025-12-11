@@ -1,0 +1,51 @@
+.carrusel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;  /* Aseguramos que el contenedor ocupe el 100% del ancho disponible */
+  }
+  
+  .carrusel {
+    display: flex;
+    overflow: hidden;  /* Oculta las imágenes que están fuera del contenedor visible */
+    width: 100%;
+    max-width: 600px;  /* Ajusta el tamaño máximo del carrusel */
+  }
+  
+  .imagenes-carrusel {
+    display: flex;
+    transition: transform 0.5s ease;  /* Animación suave al desplazamiento */
+  }
+  
+  .imagen-carrusel {
+    width: 100%;  /* Aseguramos que cada imagen ocupe todo el ancho del contenedor */
+    flex-shrink: 0;  /* Evita que las imágenes se encojan */
+  }
+  
+  .imagen-carrusel img {
+    width: 100%;  /* Asegura que las imágenes ocupen el 100% del contenedor */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    object-fit: cover;  /* Asegura que la imagen cubra el área sin distorsionarse */
+  }
+  
+  .boton-carrusel {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 32px;
+    height: 100px;
+    border-radius: 5px;
+  }
+  
+  .boton-carrusel:first-child {
+    margin-right: 10px;
+  }
+  
+  .boton-carrusel:last-child {
+    margin-left: 10px;
+  }
+  

@@ -1,0 +1,261 @@
+
+
+/* ICONO DE PLAY ONDEMAND */
+.icon-play {
+  color: white; /* o el color que prefieras */
+}
+
+.glass-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 40%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+/* Estilos header para que la capa se posicione bien */
+header.position-relative {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+/* Texto del header */
+.texto-header {
+  position: relative;
+  background: rgba(141, 141, 141, 0.001);
+  backdrop-filter: blur(5px);
+  /* -webkit-backdrop-filter: blur(10px); */
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  color: white;
+}
+
+/* Títulos header */
+.texto-xxl {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.fw-normal {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Para que la app-wrapper tenga relative y controle z-index */
+.app-wrapper.position-relative {
+  position: relative;
+  z-index: 1;
+}
+
+.app-wrapper {
+  background-color: #000;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+
+
+
+
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 30%;
+  z-index: -1;
+  pointer-events: none;
+  background: 
+              radial-gradient(circle at 93% 30%, #888888d8, transparent 32%), /* Luz arriba a la derecha */
+              radial-gradient(circle at 0% 5%, #7c7c7c, transparent 20%),/* Luz arriba a la izquierda */
+              radial-gradient(circle at 100% 130%, #ffffff, transparent 35%), /* Luz abajo a la derecha */
+              radial-gradient(circle at 7% 70%, #929292, transparent 30%); /* Luz abajo a la izquierda */
+              /* radial-gradient(circle at 0% 30%, #000000, transparent 30%); */
+  animation: moveGradient 4s infinite alternate ease-in-out;
+  background-size: 200% 400%;
+  /*filter: blur(80px);  Si querés efecto de profundidad */
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+
+
+
+
+/* Fondo animado suave para perfil de usuario */
+
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0) translate(0, 0);
+  animation-name: pulseFade;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  filter: blur(30px);
+  /* 👇 Centrado real desde su centro */
+  translate: -175% -175%;
+}
+
+/* Animación con escala + opacidad + movimiento */
+@keyframes pulseFade {
+  0% {
+    opacity: 0;
+    transform: scale(1) translate(0px, 0px);
+  }
+  20% {
+    opacity: 0.4;
+    transform: scale(5) translate(150px, -200px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(10) translate(-100px, 100px);
+  }
+  80% {
+    opacity: 0.3;
+    transform: scale(5) translate(300px, -100px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translate(0px, 200px);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* VIDEOS DE YOUTUBE */
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  border: none;
+}
+
+/* Opcional: bloquear clic derecho */
+.video-wrapper iframe {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.video-wrapper {
+  -webkit-touch-callout: none;
+}
+
+
+
+/* EFECTO DE CARGA FADE */
+@keyframes pulseOpacity {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.cargando {
+  animation: pulseOpacity 0.8s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .ndfHFb-c4YZDc-i5oIFb .ndfHFb-c4YZDc-Wrql6b-SmKAyb {
+  pointer-events: none;
+}
+.ndfHFb-c4YZDc-Wrql6b-AeOLfc-b0t70b{
+  pointer-events: none;
+} */
+
+
+
+/* 
+
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(135deg, #74afee, #4e7bb5, #2e3f80);
+  background-size: 600% 600%;
+  animation: gradientShift 30s ease infinite;
+} */
+
+/* @keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */

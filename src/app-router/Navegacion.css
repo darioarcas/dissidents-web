@@ -1,0 +1,58 @@
+/* html{
+    background-color: #0f0f0f;
+} */
+
+
+
+
+
+.texto-barra-navegacion {
+  font-size: 0.9rem;   /* o ajustá a gusto, ej: 0.85rem */
+  font-weight: 400;    /* normal */
+}
+
+.navegacion {
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    backdrop-filter: blur(3px); /* Efecto de desenfoque */
+    -webkit-backdrop-filter: blur(3px); /* Para soporte en WebKit (Safari) */
+  }
+
+.navegacion-menu {
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+
+.navegacion a {
+color: rgb(255, 255, 255); /* Color de las letras */
+/*text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.9);  Sombra difusa */
+}
+
+
+
+@media(max-width: 660px){
+    .navegacion{
+        display: none;
+    }
+}
+
+
+
+.margen-menu{
+    margin: 55px 0 5% 0;
+}
+
+/* @media(max-width: 580px){
+    .margen-menu{
+        margin: 0px 0 5% 0;
+    }
+} */
+
+
+
+/* .icono-whatsapp{
+    background-image: url("");
+} */

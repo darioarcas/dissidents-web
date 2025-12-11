@@ -1,0 +1,51 @@
+.contenedor {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    /* background-color: #d6e0e0; */
+    background-color: #0000003d;
+    border-radius: 3px;
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.452);
+    cursor: pointer;
+  }
+  
+  .titulo {
+    font-size: medium;
+    font-weight: 400;
+    color: #ececec;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-shadow: 0px 0px 0px rgb(216, 216, 216);
+    transition: text-shadow color 0.3s ease;
+  }
+  
+  .titulo:hover {
+    /* color: #eeeab9; */
+    text-shadow: 0px 0px 8px rgb(216, 216, 216);
+  }
+  
+  
+  .descripcion {
+    max-height: 0;
+    font-weight: 400;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.2s ease-in-out;
+    padding: 0px 10px;
+  }
+  
+  .descripcion.visible {
+    max-height: 200px;  /* Ajusta la altura máxima de la descripción según el contenido */
+    opacity: 1;
+    padding: 0px 10px 15px 10px;
+
+  }
+  
+  .descripcion p {
+    margin: 0;
+    font-size: 16px;
+    color: #8f8f8f;
+  }
+  
