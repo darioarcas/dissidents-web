@@ -1,0 +1,15 @@
+# Forzar redirección de HTTP a HTTPS
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Si no es HTTPS, redirigir a HTTPS (soluciona lo el indicador de sitio no seguro para los navegadores que ingresan en http)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  
+  # Redirigir todas las rutas a index.html (si no es un archivo o directorio físico)
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [QSA,L]
+</IfModule>
+
