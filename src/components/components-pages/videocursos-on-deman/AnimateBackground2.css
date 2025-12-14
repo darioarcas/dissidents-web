@@ -1,0 +1,36 @@
+@keyframes moveParticle {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(80px, -80px, 0);  /* Movimiento a la derecha y arriba */
+  }
+  50% {
+    transform: translate3d(100px, 100px, 0);  /* Movimiento hacia abajo y a la derecha */
+  }
+  75% {
+    transform: translate3d(-50px, 150px, 0);  /* Movimiento hacia abajo y a la izquierda */
+  }
+  100% {
+    transform: translate3d(0, 0, 0);  /* Regreso al punto de inicio */
+  }
+}
+
+/* Contenedor de fondo */
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Estilo de las partículas */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  animation: moveParticle 1s ease-in-out infinite;
+}

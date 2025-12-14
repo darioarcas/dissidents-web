@@ -2,7 +2,8 @@
 body {
     transition: all 0.01ms ease-in-out; /* Una transición suave */
     overflow: scroll;  /* Permite el desplazamiento */
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; (Dissidents) */
+    font-family: "Amiko", sans-serif; /* Groove */
     background-color: #28282a;
 
   }

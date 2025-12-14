@@ -5,6 +5,7 @@ import './dj/DJ.css';
 // import { db } from "../../firebase/firebase";
 import { cursos, imgHeaderOnDemand } from './dj/ArraysDataBaseCursosOnDemand';
 import { TarjetasCursosImagen } from './dj/TarjetasCursosImagen';
+import AnimatedBackground2 from './videocursos-on-deman/AnimateBackground2';
 
 export const Videocursos = () => {
     const [cursosEncontrados, setCursosEncontrados] = useState([]);
@@ -49,7 +50,9 @@ export const Videocursos = () => {
     <div className="app-wrapper position-relative">
 
         {/* Fondo con círculos animados */}
-        <div className="background-gradient position-fixed w-100 h-100 top-0 start-0 z-n1"></div>
+        {/* <div className="background-gradient position-fixed w-100 h-100 top-0 start-0 z-n1"></div> */}
+
+        <AnimatedBackground2/>
 
         <div className="content position-relative">
 
@@ -67,7 +70,13 @@ export const Videocursos = () => {
                 {/* Imagen de fondo en Header */}
                 <div
                     className="background-img"
-                    style={{backgroundImage: `url(${imgHeaderOnDemand?.imgHeaderOnDemand})`, filter:"saturate(0)", opacity:"0.3"}}
+                    style={
+                        {  
+                            // backgroundImage: `url(${imgHeaderOnDemand?.imgHeaderOnDemand})`, 
+                            // filter:"saturate(0)", 
+                            opacity:"0.1"
+                        }
+                    }
                 >
                 </div>
                 {/* Overlay oscuro con opacidad al 10% */}

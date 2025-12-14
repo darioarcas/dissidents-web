@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
-import AnimatedBackground from './videocursos-on-deman/AnimateBackground';
+// import AnimatedBackground from './videocursos-on-deman/AnimateBackground';
+import AnimatedBackground2 from './videocursos-on-deman/AnimateBackground2';
 
 export const IniciarSesion = () => {
 
@@ -57,7 +58,7 @@ export const IniciarSesion = () => {
 
         {/* Fondo con círculos animados */}
         <div className="background-gradient position-fixed w-100 h-100 top-0 start-0 z-n1"></div>
-        {/* <AnimatedBackground/> */}
+        <AnimatedBackground2/>
 
         <div className="content position-relative">
           <hr className='opacity-0 my-5' />

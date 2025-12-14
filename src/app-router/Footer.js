@@ -1,24 +1,23 @@
 import './Footer.css';
 import grooveLogo from './LOGO NUEVO.png';
-import grooveLogoRecortado from './LOGO NUEVO recortado.png';
+// import grooveLogoRecortado from './LOGO NUEVO recortado.png';
 export const Footer = () => {
     const fecha = new Date();
     const y = fecha.getFullYear();  // Obtiene el año
 
   return (
-    <footer className='footer'>
+    <footer className='footer z-3 position-absolute w-100 opacity-50'>
         <nav className='navegacion-footer'>
 
             <section className='section-logo'>
                 <img className='footer-logo-completo' src={grooveLogo} alt='logo academia groove footer'></img>
-                <a className='footer-direccion' href='https://maps.app.goo.gl/GeTQinU8DTNLVuGo9' target="_blank" rel="noopener noreferrer">Gral. Jose Artigas 38, Córdoba, Argentina</a>
-                <p className='footer-contacto'>+54 9 351 341 7537 - academiagroovedj@gmail.com</p>
+                <p className='footer-contacto'>dissidents.contact@gmail.com</p>
             </section>
 
             <ul>
                 <li> 
                     {/* YOUTUBE */}
-                    <a href="https://www.youtube.com/@AcademiaGroove" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/@alejandroarcas/videos" target="_blank" rel="noopener noreferrer">
                         <svg className="svg-youtube" xmlns="http://www.w3.org/2000/svg" viewBox="0,0,256,256" ><g stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none"><g transform="scale(5.33333,5.33333)"><path className='color-svg' d="M43.2,33.9c-0.4,2.1 -2.1,3.7 -4.2,4c-3.3,0.5 -8.8,1.1 -15,1.1c-6.1,0 -11.6,-0.6 -15,-1.1c-2.1,-0.3 -3.8,-1.9 -4.2,-4c-0.4,-2.3 -0.8,-5.7 -0.8,-9.9c0,-4.2 0.4,-7.6 0.8,-9.9c0.4,-2.1 2.1,-3.7 4.2,-4c3.3,-0.5 8.8,-1.1 15,-1.1c6.2,0 11.6,0.6 15,1.1c2.1,0.3 3.8,1.9 4.2,4c0.4,2.3 0.9,5.7 0.9,9.9c-0.1,4.2 -0.5,7.6 -0.9,9.9z" fill='#fff'></path><path d="M20,31v-14l12,7z" fillOpacity="100" fill="black"></path></g></g></svg>
                     {/* <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 530 530"><path fill="#fff" d="M434.762 74.334C387.553 26.81 323.245 0 256.236 0h-.768C115.795.001 2.121 113.696 2.121 253.456l.001.015a253.516 253.516 0 0033.942 126.671L0 511.514l134.373-35.269a253.416 253.416 0 00121.052 30.9h.003.053C395.472 507.145 509 393.616 509 253.626c0-67.225-26.742-131.727-74.252-179.237l.014-.055zM255.555 464.453c-37.753 0-74.861-10.22-107.293-29.479l-7.72-4.602-79.741 20.889 21.207-77.726-4.984-7.975c-21.147-33.606-32.415-72.584-32.415-112.308 0-116.371 94.372-210.743 210.741-210.743 56.011 0 109.758 22.307 149.277 61.98a210.93 210.93 0 0161.744 149.095c0 116.44-94.403 210.869-210.844 210.869h.028zm115.583-157.914c-6.363-3.202-37.474-18.472-43.243-20.593-5.769-2.121-10.01-3.202-14.315 3.203-4.305 6.404-16.373 20.593-20.063 24.855-3.69 4.263-7.401 4.815-13.679 1.612-6.278-3.202-26.786-9.883-50.899-31.472a192.748 192.748 0 01-35.411-43.867c-3.712-6.363-.404-9.777 2.82-12.873 3.224-3.096 6.363-7.381 9.48-11.092a41.58 41.58 0 006.357-10.597 11.678 11.678 0 00-.508-11.09c-1.718-3.18-14.444-34.357-19.534-47.06-5.09-12.703-10.37-10.603-14.272-10.901-3.902-.297-7.911-.19-12.089-.19a23.322 23.322 0 00-16.964 7.911c-5.707 6.298-22.1 21.673-22.1 52.849s22.671 61.249 25.852 65.532c3.182 4.284 44.663 68.227 108.288 95.649 15.099 6.489 26.891 10.392 36.053 13.403a87.504 87.504 0 0025.216 3.718c4.905 0 9.82-.416 14.65-1.237 12.174-1.782 37.453-15.291 42.776-30.073s5.303-27.57 3.711-30.093c-1.591-2.524-5.704-4.369-12.088-7.615l-.038.021z"/></svg> */}
                     </a>
@@ -26,14 +25,14 @@ export const Footer = () => {
 
                 <li>
                     {/* INSTAGRAM */}
-                    <a href="https://www.instagram.com/academiagroove?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/dissidentsrecords" target="_blank" rel="noopener noreferrer">
                         <svg className="svg-instagram" xmlns="http://www.w3.org/2000/svg" fill='#fff' viewBox="0 0 24 24"><path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"/></svg>
                     </a>
                 </li>
 
                 <li>
                     {/* E-MAIL */}
-                    <a href="mailto:academiagroovedj@gmail.com?subject=Consulta%20desde%20la%20WEB%20de%20GROOVE&body=Hola,%20quisiera%20saber%20más%20sobre%20los%20cursos,%20precios%20y%20cupos%20disponibles.%20Gracias%20por%20tu%20respuesta."
+                    <a href="mailto:dissidents.contact@gmail.com?subject=Consulta%20desde%20la%20WEB%20de%20GROOVE&body=Hola,%20quisiera%20saber%20más%20sobre%20los%20cursos,%20precios%20y%20cupos%20disponibles.%20Gracias%20por%20tu%20respuesta."
                     target="_blank" 
                     rel="noopener noreferrer">
                         <svg className="svg-email" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 122.879 88.855" enableBackground="new 0 0 122.879 88.855" fill="#fff">
@@ -59,9 +58,9 @@ export const Footer = () => {
 
         <hr className='footer-hr'/>
         <section className='footer-logo-fecha'>
-            <img className='logo-groove-footer-recortado' src={grooveLogoRecortado} alt='logo groove solo nombre'>
-            </img>
-            <p className='fuente-groove fs-6 text-center p-0 m-0 opacity-50'>  - © {y}. Todos los derechos reservados</p>
+            {/* <img className='logo-groove-footer-recortado' src={grooveLogoRecortado} alt='logo groove solo nombre'>
+            </img> */}
+            <p className='fuente-groove fs-6 text-center p-0 m-0 opacity-50'>Dissidents School {y}.</p>
         </section>
     </footer>
   )

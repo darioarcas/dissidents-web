@@ -4,6 +4,7 @@ import { useSelector } from "react-redux"
 import Dashboard from './perfil-usuario/Dashboard';
 import DropdownUsuario from "../helpers/DropDownUsuario";
 import AnimatedBackground from "./videocursos-on-deman/AnimateBackground";
+// import AnimatedBackground2 from "./videocursos-on-deman/AnimateBackground2";
 
 export const PerfilUsuario = ({handleLogout}, checking) => {
 

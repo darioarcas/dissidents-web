@@ -1,8 +1,8 @@
 {
-  "name": "client",
+  "name": "dissidents-school",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://darioarcas.github.io/pagina-groove-inicio-de-sesion",
+  "homepage": "https://darioarcas.github.io/dissidents-web",
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
     "@testing-library/jest-dom": "^5.17.0",

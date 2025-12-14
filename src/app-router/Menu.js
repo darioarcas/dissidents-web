@@ -91,12 +91,6 @@ export const Menu = () => {
                         <div className="collapse mt-2" id="submenuCursos">
                             <ul className="list-unstyled ps-3">
                             <li className="py-1" data-bs-dismiss="offcanvas">
-                                <Link className="nav-link text-white" to="/dj">DJ</Link>
-                            </li>
-                            <li className="py-1" data-bs-dismiss="offcanvas">
-                                <Link className="nav-link text-white" to="/produccion-musical">PRODUCCIÓN</Link>
-                            </li>
-                            <li className="py-1" data-bs-dismiss="offcanvas">
                                 <Link className="nav-link text-white" to="/tutoriales">TUTORIALES</Link>
                             </li>
                             <li className="py-1" data-bs-dismiss="offcanvas">
@@ -105,12 +99,6 @@ export const Menu = () => {
                             </ul>
                         </div>
                     </li>
-
-                    <Link className="nav-link w-100" to="/alquiler-sala">
-                        <li className="nav-item mx-2 py-3" data-bs-dismiss="offcanvas" aria-label="Close">
-                                <h6>ALQUILER SALA</h6>
-                        </li>
-                    </Link>
 
 
                     <Link className="nav-link w-100" to="/iniciar-sesion">

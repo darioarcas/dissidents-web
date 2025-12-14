@@ -13,7 +13,7 @@
 
 .navegacion {
     z-index: 5;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
     backdrop-filter: blur(3px); /* Efecto de desenfoque */
     -webkit-backdrop-filter: blur(3px); /* Para soporte en WebKit (Safari) */
   }

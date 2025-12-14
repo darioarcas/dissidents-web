@@ -11,8 +11,8 @@ const createCircle = (forcedDelay = null) => {
     top: getRandom(5, 95),
     left: getRandom(5, 95),
     size,
-    // color: `hsl(${Math.floor(Math.random() * 360)}, 70%, 80%)`,
-    color: `white`,
+    color: `hsl(${Math.floor(Math.random() * 360)}, 70%, 80%)`,
+    // color: `white`,
     duration: getRandom(8, 32),
     delay: forcedDelay !== null ? forcedDelay : getRandom(1, 10), // default delay entre 2s y 10s
   };
