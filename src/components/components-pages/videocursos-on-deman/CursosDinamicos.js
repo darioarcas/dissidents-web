@@ -13,6 +13,8 @@ import { ArrayCursos } from '../dj/ArraysCursosOnDemand';
 // import mercadopagoLogo from './img/mercadopago.png';
 import ReactDOMServer from 'react-dom/server';
 import LoadingPagoPage from './LoadingPayPage';
+import AnimatedBackground from "./AnimateBackground";
+import AnimatedBackground2 from "./AnimateBackground2";
 
 
 export const CursosDinamicos = () => {
@@ -40,6 +42,7 @@ export const CursosDinamicos = () => {
             const snapshot = await db.collection("cursos_publicos").get();
             const cursosLeidos = snapshot.docs.map(doc => ({
             cursoId: doc.id,
+            cursoIdPay: doc.data().cursoId || "", // El id del curso en la coleccion de cursos privados
             nombre: doc.data().nombre || "",
             descripcion: doc.data().descripcion || "",
             imagen: doc.data().imagen || "",
@@ -50,7 +53,10 @@ export const CursosDinamicos = () => {
             // Buscar el nombre del curso en el array usando el nombre del curso (esto nos da el precio del curso)
             const cursoEncontrado = cursosLeidos.find( cursos => cursos.nombre === curso2.nombre);
             console.log("Curso encontrado PRECIO:", cursoEncontrado);
-            setCursoPublicos(cursoEncontrado);
+            setCursoPublicos(ant => {
+            // Puedes usar el valor anterior (ant) para actualizar el estado de manera lógica
+            return cursoEncontrado;
+            });
 
 
         } catch (error) {
@@ -97,16 +103,16 @@ export const CursosDinamicos = () => {
         try {
             // if(true)return;
             const token = await user.getIdToken();
-
-            const response = await fetch("https://backend-groove-pi69.onrender.com/api/create_preference", {
+            
+            const response = await fetch("https://backend-dissident.onrender.com/api/create_preference", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`,
                 },
                 body: JSON.stringify({
-                    cursoId: curso.cursoId,
-                    cursoNombre: curso.nombre,
+                    cursoId: cursoPublicos?.cursoIdPay,// El id del curso en la coleccion de cursos privados
+                    cursoNombre: cursoPublicos?.nombre,
                     uid: user.uid,
                     base_url: base_url, // 👈 esto manda el dominio actual
                 }),
@@ -159,7 +165,9 @@ export const CursosDinamicos = () => {
         <div className="app-wrapper position-relative">
             
             {/* Fondo con círculos animados */}
-            <div className="background-gradient position-fixed w-100 h-100 top-0 start-0 z-n1"></div>
+            {/* <div className="background-gradient position-fixed w-100 h-100 top-0 start-0 z-n1"></div> */}
+
+            <AnimatedBackground2/>
 
             {/* Contenido principal */}
             <div className="content position-relative">

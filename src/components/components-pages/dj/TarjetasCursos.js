@@ -89,12 +89,13 @@ export const TarjetasCursos = ({ArrayCursos, youtube=false, inicio=false, onDema
           {/* Botón para ver todos los videos */}
           <div className="mt-4 d-flex justify-content-center">
             <a
-              href={`https://www.youtube.com/playlist?list=${ArrayCursos[0].playlistId}`}
+              // href={`https://www.youtube.com/playlist?list=${ArrayCursos[0].playlistId}`}
+              href={`https://www.youtube.com/@alejandroarcas/videos`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-dark"
             >
-              Lista en Youtube
+              Todos los Videos
             </a>
           </div>
 

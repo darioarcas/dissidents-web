@@ -1,18 +1,12 @@
 // src/components/helpers/CrearCursosPrivados.js
 
-import React from "react";
 import { db } from "../../firebase/firebase"; // Usás tu archivo firebase.js clásico
 
 export const CrearCursos = () => {
   const cursos = [
-    "Curso de DJ con CDJ Pioneer Inicial",
-    "Curso de DJ Urbano Inicial",
-    "Curso de DJ con CDJ Pioneer Avanzado",
-    "Curso de DJ con Traktor",
-    "Curso de Produccion Musical Electronica con Ableton Inicial",
-    "Curso de Produccion Musical Electronica con Ableton Avanzado",
+    "Curso de Produccion Musical Inicial con Ableton",
+    "Curso de Produccion Musical Avanzado con Ableton",
     "Curso de Mezcla y Masterizacion Incial",
-    "Curso de Produccion Musical Urbana con Ableton",
     "Curso de Progressive Avanzado Intensivo con Ableton",
   ];
 
@@ -46,7 +40,7 @@ export const CrearCursos = () => {
         // Usamos add() para generar ID automático
         await db.collection("cursos_privados").add({
           nombre: nombreCurso,
-          precio:"",
+          precio:25000,
           descripcion: "",
           clases: generarClases(16),
           imagen: "",

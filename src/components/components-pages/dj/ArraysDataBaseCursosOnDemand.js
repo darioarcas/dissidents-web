@@ -1,3 +1,7 @@
+// Lista de Cursos en pagina de Videocursos On Demand
+
+
+
 import djAvanzado from "./img/galeria-dj-avanzado/dj-avanzado-1.png"; 
 import headerOnDemand from "./img/imgHeaderOnDemand.jpg";  
 import headerDjCdj from "./img/galeria-dj-cdj/imgHeader.webp";
@@ -25,58 +29,28 @@ export const imgHeaderOnDemand = {
 }
 
 export const cursos = [
+    // {
+    //     cursoId: "49IDOMB1Y4Ggenk24eiJ",
+    //     nombre: "Curso de Mezcla y Masterizacion Incial",
+    //     descripcion: "",
+    //     img: mezclaYMaster,
+    // },
     {
-        cursoId: "49IDOMB1Y4Ggenk24eiJ",
-        nombre: "Curso de Mezcla y Masterizacion Incial",
-        descripcion: "",
-        img: mezclaYMaster,
-    },
-    {
-        cursoId: "Ds4La90WmSxEzdyC3CuO",
-        nombre: "Curso de DJ Urbano Inicial",
-        descripcion: "",
-        img: headerDjUrbano,
-    },
-    {
-        cursoId: "HNxJyZfHaJZqNjyFAuSN",
-        nombre: "Curso de DJ con Traktor",
-        descripcion: "",
-        img: headerDjTrktor,
-    },
-    {
-        cursoId: "nps0NwWeiM0iNSi0eJKG",
-        nombre: "Curso de DJ con CDJ Pioneer Avanzado",
-        descripcion: "",
-        img: djAvanzado,
-    },
-    {
-        cursoId: "FtKt6g2fieCbOuqN64h8",
-        nombre: "Produccion Musical Electronica con Ableton",
+        cursoId: "HHTzk47PSIBMEkoxHoux",
+        nombre: "Curso de Producción: Nivel Inicial - Técnica con Samples",
         descripcion: "",
         img: produccionInicial,
     },
-    {
-        cursoId: "Rqs84SWXb9q0Q778zsnb",
-        nombre: "Produccion Musical Electronica con Ableton Avanzado",
-        descripcion: "",
-        img: produccionAvanzada,
-    },
-    {
-        cursoId: "AZWe4N6HbE2KKM1XQiCC",
-        nombre: "Curso de DJ con CDJ Pioneer Inicial",
-        descripcion: "",
-        img: headerDjCdj,
-    },
+    // {
+    //     cursoId: "Rqs84SWXb9q0Q778zsnb",
+    //     nombre: "Produccion Musical Electronica con Ableton Avanzado",
+    //     descripcion: "",
+    //     img: produccionAvanzada,
+    // },
     {
         cursoId: "M3FEyummGSJHiaqltt6s",
         nombre: "Curso de Progressive Avanzado Intensivo con Ableton",
         descripcion: "HOLAAAAAAAAA",
         img: produccionInicial2,
     },
-    // {
-    //     cursoId: "e1NbdSjHO5q7QlVY3jlq",
-    //     nombre: "Curso de Produccion Musical Urbana con Ableton",
-    //     descripcion: "",
-    //     img: "",
-    // }
 ]
