@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dissidents-web/static/css/main.5c0a5c0b.css",
-    "main.js": "/dissidents-web/static/js/main.c0ee0f1e.js",
+    "main.js": "/dissidents-web/static/js/main.4d95f840.js",
     "static/media/dj-cdj-inicial-on-demand.png": "/dissidents-web/static/media/dj-cdj-inicial-on-demand.aa3b67fbc8dff32ca3a8.png",
     "static/media/curso-de-dj-urbano-inicial.png": "/dissidents-web/static/media/curso-de-dj-urbano-inicial.ff99dc421509b92720f9.png",
     "static/media/curso-de-dj-con-traktor.png": "/dissidents-web/static/media/curso-de-dj-con-traktor.76b1cacf4d7f5a8eb30c.png",
@@ -24,10 +24,10 @@
     "static/media/dj-vinilos.jpeg": "/dissidents-web/static/media/dj-vinilos.91e575aa20acd8ef7ce4.jpeg",
     "index.html": "/dissidents-web/index.html",
     "main.5c0a5c0b.css.map": "/dissidents-web/static/css/main.5c0a5c0b.css.map",
-    "main.c0ee0f1e.js.map": "/dissidents-web/static/js/main.c0ee0f1e.js.map"
+    "main.4d95f840.js.map": "/dissidents-web/static/js/main.4d95f840.js.map"
   },
   "entrypoints": [
     "static/css/main.5c0a5c0b.css",
-    "static/js/main.c0ee0f1e.js"
+    "static/js/main.4d95f840.js"
   ]
 }
