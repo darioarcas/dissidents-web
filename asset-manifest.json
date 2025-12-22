@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dissidents-web/static/css/main.b43e6d33.css",
-    "main.js": "/dissidents-web/static/js/main.7bd90cea.js",
+    "main.css": "/dissidents-web/static/css/main.002f15a7.css",
+    "main.js": "/dissidents-web/static/js/main.0a74540b.js",
     "static/media/dj-cdj-inicial-on-demand.png": "/dissidents-web/static/media/dj-cdj-inicial-on-demand.aa3b67fbc8dff32ca3a8.png",
     "static/media/curso-de-dj-urbano-inicial.png": "/dissidents-web/static/media/curso-de-dj-urbano-inicial.ff99dc421509b92720f9.png",
     "static/media/curso-de-dj-con-traktor.png": "/dissidents-web/static/media/curso-de-dj-con-traktor.76b1cacf4d7f5a8eb30c.png",
@@ -23,12 +23,16 @@
     "static/media/dj-traktor.jpg": "/dissidents-web/static/media/dj-traktor.f998a636281ee39a96b7.jpg",
     "static/media/mercadopago.png": "/dissidents-web/static/media/mercadopago.7a4702705cda5aa7cc82.png",
     "static/media/dj-vinilos.jpeg": "/dissidents-web/static/media/dj-vinilos.91e575aa20acd8ef7ce4.jpeg",
+    "static/media/slick.svg": "/dissidents-web/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/dissidents-web/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/dissidents-web/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/dissidents-web/index.html",
-    "main.b43e6d33.css.map": "/dissidents-web/static/css/main.b43e6d33.css.map",
-    "main.7bd90cea.js.map": "/dissidents-web/static/js/main.7bd90cea.js.map"
+    "static/media/slick.woff": "/dissidents-web/static/media/slick.295183786cd8a1389865.woff",
+    "main.002f15a7.css.map": "/dissidents-web/static/css/main.002f15a7.css.map",
+    "main.0a74540b.js.map": "/dissidents-web/static/js/main.0a74540b.js.map"
   },
   "entrypoints": [
-    "static/css/main.b43e6d33.css",
-    "static/js/main.7bd90cea.js"
+    "static/css/main.002f15a7.css",
+    "static/js/main.0a74540b.js"
   ]
 }
