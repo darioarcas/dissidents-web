@@ -25,17 +25,17 @@ export const Tutoriales = () => {
                 {/* Overlay oscuro con opacidad al 10% */}
                 {/* <div className='overlay-img'></div> */}
 
-                <div className='texto-header'>
-                    <h1 className='mb-4 text-white'>TUTORIALES</h1>
-                    <h6 className='fw-normal fs-6'>
-                    Te presentamos una amplia variedad de videos diseñados para mejorar tus habilidades como productor musical. Estos tutoriales te guiarán paso a paso para mejorar tus producciones.
+                <div className='texto-header w-100 text-center text-white d-flex flex-column justify-content-center align-items-center h-100' style={{padding:"0", paddingTop:"90px"}}>
+                    <h1 className='text-white text-center fs-2'>Novedades</h1>
+                    <h6 style={{textAlign:"center", fontSize:"12px", fontWeight:"300", margin:"10px 0"}}>
+                        Te ofrecemos una gran variedad de videos, desde tutoriales para mejorar tus habilidades como productor musical hasta nuestras últimas novedades.
 
                     </h6>
                 </div>
             </header>
 
             <main>
-                <YouTubePlaylist playlistId={'PL2a32sHFSitvcGFIEdnC2BVDnJTmkoFnj'} YouTubePlaylist={1} inicio={false}/>
+                <YouTubePlaylist playlistId={'PLYafYnQmAYrvGshkeZpJdCD3ntI0fzUkX'} YouTubePlaylist={1} inicio={false}/>
                 {/* <TarjetasCursos ArrayCursos={ArrayCursos} /> */}
             </main>
         </div>

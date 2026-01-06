@@ -80,11 +80,11 @@ export const Videocursos = () => {
                 >
                 </div>
                 {/* Overlay oscuro con opacidad al 10% */}
-                <div className='overlay-img' style={{filter:"invert(1)", backgroundColor:"rgba(206, 206, 206, 0.48)"}}></div>
+                <div className='overlay-img-videocursos' style={{filter:"invert(1)", backgroundColor:"rgba(206, 206, 206, 0.1)"}}></div>
 
                 <div className='texto-header w-100 text-center text-white d-flex flex-column justify-content-center align-items-center h-100' style={{padding:"0rem"}}>
-                    <h1 className='text-white text-center'>
-                        Videocursos On-Demand
+                    <h1 className='text-white text-center fs-5'>
+                        Cursos de Producción
                         
                     </h1>
                         {/* <span class="glass-icon" style={{margin:"0 auto"}}>
@@ -101,13 +101,13 @@ export const Videocursos = () => {
                          </span>  */}
                     
 
-                    <h6 className='fw-normal fs-6 text-center'>
-                        Accede a una formación completa para DJs y productores, disponible cuando y donde quieras.
+                    <h6 style={{textAlign:"center", fontSize:"12px", fontWeight:"300", margin:"10px 0"}}>
+                        Accede a una formación completa para productores, disponible cuando y donde quieras.
                     </h6>
                 </div>
             </header>
 
-            <main className='pt-5'>
+            <main>
                 {cursosEncontrados.length === 0 ? (
                     <div className="mx-auto w-100 d-flex justify-content-center">
                         <div style={{ textAlign: 'center', marginTop: '3rem', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>

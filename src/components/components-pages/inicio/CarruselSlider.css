@@ -1,0 +1,105 @@
+.carrusel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  /* overflow: hidden; */
+  cursor: pointer; /* Detecta el swipe */
+  margin: 0;
+  padding: 0;
+}
+
+.carrusel-slide {
+  display: flex;
+  transition: transform 1s ease-out; /* Duración de la animación */
+}
+
+.course-card {
+  background: #ffffff00;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* margin: 0 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  width: 300px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+
+
+.course-image {
+  width: 100%;
+  /* height: 150px; */
+  object-fit: contain; /* Ajuste de imagen */
+  border-radius: 8px;
+}
+
+.carrusel-button {
+  background: rgba(0, 0, 0, 0.089);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+.carrusel-button:hover {
+  opacity: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+
+}
+
+.carrusel-container {
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+
+  .course-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media(min-width: 580px){
+    .course-card{
+        width: 100%;
+        /* height: 250px; */
+        margin-bottom: 20px;
+    }
+    .course-image {
+      width: 100%;
+      height: 300px;
+    }
+}
+@media(min-width: 720px){
+  .course-card{
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .course-image {
+      width: 100%;
+      height: auto;
+    }
+}

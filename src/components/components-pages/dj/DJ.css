@@ -22,8 +22,8 @@
     color: rgb(236, 236, 236);
     z-index: 2;
     /* top: 25%; */
-    margin-top: 55px;
-    padding: 55px 0 55px 0;
+    margin-top: 0;
+    padding: 0;
 }
 
 .text-info{
@@ -73,9 +73,21 @@
     top: 0px; 
     left: 0px; 
     right: 0px; 
-    bottom: 0px; 
+    bottom: 0px;
      /* Capa de tinte negro con 10% de opacidad */
-     background-color: rgba(0, 0, 0, 0.438); 
+     background-color: rgba(0, 0, 0, 0.082); 
+     /* Asegura que la capa de tinte esté encima de la imagen  */
+     z-index: 2;
+}
+.overlay-img-videocursos{
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    bottom: 0px;
+    height: 220px;
+     /* Capa de tinte negro con 10% de opacidad */
+     background-color: rgba(0, 0, 0, 0.158); 
      /* Asegura que la capa de tinte esté encima de la imagen  */
      z-index: 2;
 }
@@ -89,7 +101,7 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0.4; /* 👈 Esta opacidad solo afecta la imagen */
+  opacity: 0.5; /* 👈 Esta opacidad solo afecta la imagen */
   z-index: 0;
 }
 
@@ -158,7 +170,7 @@
 }
 
 .contenedor-body ul{
-    color: rgb(92, 92, 92);
+    color: rgb(170, 170, 170);
     font-weight: 500;
     font-size: small;
     padding: 0;
@@ -197,7 +209,7 @@
 }
 
 .contenedor-temario ul{
-    color: rgb(92, 92, 92);
+    color: rgb(168, 168, 168);
     font-weight: 500;
     font-size: small;
 }

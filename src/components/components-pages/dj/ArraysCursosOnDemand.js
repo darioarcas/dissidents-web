@@ -8,22 +8,23 @@ import djUrbano from "./img/galeria-dj-urbano/curso-de-dj-urbano-inicial.png";
 import headerDjCdj from "./img/galeria-dj-cdj/imgHeader.webp";
 import headerDjTrktor from "./img/headerDjTraktor.jpg";
 import headerDjUrbano from "./img/headerDjUrbano.jpg";
-// import produccionInicial from "../produccion-musical/img/galeria-produccion-inicial/produccion-musical-1.jpg";
+import produccionInicial from "./img/produccion-inicial.jpg";
 // import produccionInicial2 from "../produccion-musical/img/galeria-produccion-inicial/curso-de-produccion-musical-electronica-con-ableton-inicial.webp";
 // import produccionAvanzada from "../produccion-musical/img/galeria-produccion-avanzada/produccion-musical-avanzada-1.jpeg";
 // import teoriaMusical from "../produccion-musical/img/03.jpg";
-// import mezclaYMaster from "../produccion-musical/img/galeria-mixing-mastering/mixing-mastering-1.avif"; 
-// import headerProduccionInicial from "../produccion-musical/img/headerProduccionInicial.jpg"; 
+import mezclaYMaster from "./img/headerDjTraktor.jpg"; 
+import progressiveAvanzado from "./img/progressive-avanzado.jpg"; 
+import headerProduccionInicial from "./img/Produ-img-header.jpg"; 
 // import headerProduccionAvanzada from "../produccion-musical/img/headerProduccionAvanzada.jpg"; 
-// import headerMixingMasteing from "../produccion-musical/img/headerMixingMasteing.jpg"; 
+import headerMixingMasteing from "./img/headerDjTraktor.jpg"; 
 
-const produccionInicial = undefined;
+// const produccionInicial = undefined;
 const produccionInicial2 = undefined;
 const produccionAvanzada = undefined;
-const mezclaYMaster = undefined;
-const headerProduccionInicial = undefined;
+// const mezclaYMaster = undefined;
+// const headerProduccionInicial = undefined;
 const headerProduccionAvanzada = undefined;
-const headerMixingMasteing = undefined;
+// const headerMixingMasteing = undefined;
 
 
 export const ArrayCursos = [
@@ -33,8 +34,8 @@ export const ArrayCursos = [
         titulo:"Curso de Producción Nivel Inicial",
         cursoId: "HHTzk47PSIBMEkoxHoux",
         nombre: "Curso de Producción: Nivel Inicial - Técnica con Samples",
-        img: undefined,//produccionInicial,
-        imgHeader: headerProduccionInicial,
+        img: produccionInicial,//undefined,//
+        imgHeader: undefined,//headerProduccionInicial,
         imgSecundaria: produccionInicial2,
         imgGaleria: [produccionInicial, produccionInicial, produccionInicial, produccionInicial, produccionInicial, produccionInicial],
         descipcion:"Creá tu propia música desde cero, utilizando Ableton Live. En esta capacitación desarrollaremos temas sobre uso de sintetizadores, samplers, efectos, conceptos básicos de teoría musical (escalas, acordes y progresiones armónicas), creaciones de patrones rítmicos, estructura, mezcla y mastering básico para poder finalizar tu proyecto musical.",
@@ -112,9 +113,9 @@ export const ArrayCursos = [
         titulo:"Curso de Progressive Avanzado Intensivo con Ableton",
         cursoId: "ZdaaZwWyzN6K63Ln502a",
         nombre: "Curso de Progressive Avanzado Intensivo con Ableton",
-        img: undefined, //mezclaYMaster,
-        imgHeader: headerMixingMasteing,
-        imgSecundaria: mezclaYMaster,
+        img: progressiveAvanzado,//mezclaYMaster,
+        imgHeader: undefined,//headerMixingMasteing,
+        imgSecundaria: undefined,//mezclaYMaster,
         imgGaleria: [mezclaYMaster, mezclaYMaster, mezclaYMaster, mezclaYMaster, mezclaYMaster, mezclaYMaster],
         descipcion:"Aprenderás una variedad de habilidades y técnicas esenciales para transformar tus producciones musicales asegurando que suenen claras, potentes y profesionales, listas para ser distribuidas en cualquier formato. Ecualización, equilibrio de volumen, compresión, panoramización, efectos como delay y reverb, son algunos de los temas en donde profundizaremos el contenido.",
         informacionCurso: [

@@ -1,7 +1,7 @@
 
 .sombra{
     
-    box-shadow: 0 0 12px rgba(175, 175, 175, 0.849); /* Sombra difusa */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.315); /* Sombra difusa */
 }
 
 
@@ -28,6 +28,7 @@
     max-width: 92%;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
 }
 
 
@@ -114,10 +115,10 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.3; /* Transparencia de la imagen */
+  /* opacity: 0.3; */
   z-index: 1;
   overflow: hidden;
-  filter: saturate(1.8);  /*invert(1)🔧 Ajusta la saturación aquí */
+  /* filter: saturate(1.8); */
 }
 
 .curso-fondo::before {
@@ -148,6 +149,7 @@
 }
 
 .curso-contenido {
+  font-size: .85rem;
   position: absolute;
   z-index: 3;
   top: 50%;
@@ -160,8 +162,8 @@
 }
 
 .curso-titulo {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: .85rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -180,7 +182,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;       /* Puedes ajustar el ancho aquí */
-  height: 70%;     /* Y también la altura */
+  height: 40%;     /* Y también la altura */
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(15px);

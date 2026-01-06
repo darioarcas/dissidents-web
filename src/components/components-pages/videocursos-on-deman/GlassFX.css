@@ -1,0 +1,21 @@
+.glass-effect {
+    background: rgba(255, 255, 255, 0); /* Fondo translúcido */
+    border-radius: 15px; /* Esquinas redondeadas */
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Efecto de vidrio */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: shine 2s infinite linear; /* Animación de brillo */
+}
+
+@keyframes shine {
+    0% {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 2px rgba(255, 255, 255, 0.055);
+    }
+    50% {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 0 3px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 2px #ebebeb18;
+    }
+}

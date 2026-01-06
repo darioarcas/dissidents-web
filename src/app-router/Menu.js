@@ -1,11 +1,12 @@
 // src/app-router/Menu.js
 
-import { Link } from 'react-router-dom';
-import logo from './LOGO NUEVO.png';
+import { Link, useLocation } from 'react-router-dom';
+import logo from '../components/components-pages/inicio/img/dissidents-school-logo.png';
 import { useSelector } from 'react-redux';
 
 export const Menu = () => {
 
+    const location = useLocation();
     const auth = useSelector(store=>{return store.auth});
 
   return (
@@ -21,16 +22,19 @@ export const Menu = () => {
 
                 </div>
             </button>
-
-            <div className="px-auto w-100">
-                <ul className="navbar-nav mx-auto mb-0 mb-lg-0 d-flex align-items-center fw-normal text-center">
-                    <li className="nav-item d-block">
-                        <Link className="nav-link fuente-groove fs-5 text-white" to="/">
-                            <img src={logo} style={{width:"17%"}} alt='logo groove'></img>
-                        </Link>
-                    </li>
-                </ul>
-            </div>
+            
+            {/* LOGO centrado */}
+                <div className="px-auto w-100">
+                    <ul className="navbar-nav mx-auto mb-0 mb-lg-0 d-flex align-items-center fw-normal text-center">
+                        <li className="nav-item d-block" style={{margin:"0 0 0 25px"}}>
+                            <Link className="nav-link fuente-groove fs-5 text-white" to="/">
+                                {/* {location.pathname !== ('/'|| '/dissidents-web') ? ( */}
+                                    <img src={logo} style={{width:"100px"}} alt='logo groove'></img>
+                                {/* ) : <div style={{height:"30px"}} ></div>} */}
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
         </nav>
 
 
@@ -70,10 +74,22 @@ export const Menu = () => {
                             </li>
                         </Link> */}
 
+                    <Link className="nav-link w-100" to="/novedades">
+                        <li className="nav-item mx-2 py-3" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <h6>Novedades</h6>
+                        </li>
+                    </Link>
+
+                    <Link className="nav-link w-100" to="/videocursos">
+                        <li className="nav-item mx-2 py-3" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <h6>Cursos</h6>
+                        </li>
+                    </Link>
 
 
 
-                    <li className="nav-item mx-2 py-3">
+
+                    {/* <li className="nav-item mx-2 py-3">
                         <button 
                             className="btn text-white w-100 text-start p-0 d-flex flex-row" 
                             type="button" 
@@ -98,7 +114,7 @@ export const Menu = () => {
                             </li>
                             </ul>
                         </div>
-                    </li>
+                    </li> */}
 
 
                     <Link className="nav-link w-100" to="/iniciar-sesion">

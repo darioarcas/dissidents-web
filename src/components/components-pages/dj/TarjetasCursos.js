@@ -20,7 +20,7 @@ export const TarjetasCursos = ({ArrayCursos, youtube=false, inicio=false, onDema
 
 
   return (
-    <div className={inicio ? ' container mt-2' : `container mt-5 mb-5`}>
+    <div className={inicio ? ' m-3' : `container mt-5 mb-5`}>
 
       {/* Si NO es llamado por YoutubePlaylist */}
       {!youtube && !onDemand ? 
@@ -57,7 +57,7 @@ export const TarjetasCursos = ({ArrayCursos, youtube=false, inicio=false, onDema
         <div className={inicio ? "w-100" : `row ancho-maximo`}>
           {ArrayCursos.map((curso, index) => {
             return (
-              <div key={index} className={inicio ? 'w-75 mx-auto' : 'col-12 col-md-6 mb-5'}>
+              <div key={index} className={inicio ? 'w-100 mx-auto' : 'col-12 col-md-6 mb-5'}>
                 <div className="card sombra" style={{backgroundColor:"rgba(116, 116, 116, 0.15)", backdropFilter:"blur(12px)"}}>
                   {/* <Link to={`${location.pathname}/${curso.id}`}>
                     <img src={curso.img} className="card-img-top" alt="imagen del curso" />
@@ -88,15 +88,30 @@ export const TarjetasCursos = ({ArrayCursos, youtube=false, inicio=false, onDema
 
           {/* Botón para ver todos los videos */}
           <div className="mt-4 d-flex justify-content-center">
-            <a
-              // href={`https://www.youtube.com/playlist?list=${ArrayCursos[0].playlistId}`}
-              href={`https://www.youtube.com/@alejandroarcas/videos`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-dark"
-            >
-              Todos los Videos
-            </a>
+            {
+              inicio ?
+              <Link
+                to={`/novedades`}
+                // target="_blank"
+                // rel="noopener noreferrer"
+                className="btn btn-transparent"
+                style={{border:"solid 2px #ffffff8f", padding:"0", margin:"0 auto"}}
+              >
+                <p className='p-0 m-2'>Conocer más de Dissidents Records</p>
+                
+              </Link> 
+              
+              :
+
+              <a
+                href={`https://www.youtube.com/playlist?list=${ArrayCursos[0].playlistId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-dark"
+              >
+                Lista en Youtube
+              </a>
+            }
           </div>
 
 

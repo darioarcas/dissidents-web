@@ -3,7 +3,8 @@ body {
     transition: all 0.01ms ease-in-out; /* Una transición suave */
     overflow: scroll;  /* Permite el desplazamiento */
     /* font-family: "Montserrat", sans-serif; (Dissidents) */
-    font-family: "Amiko", sans-serif; /* Groove */
+    /*font-family: "Amiko", sans-serif;*/ /* Groove */
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #28282a;
 
   }
@@ -23,6 +24,12 @@ body {
 body::-webkit-scrollbar {
     display: none; /* Oculta la barra de desplazamiento */
   }
+
+
+
+  /* slick carousel styles */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 
 

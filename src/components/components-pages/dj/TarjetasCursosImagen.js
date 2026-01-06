@@ -26,8 +26,9 @@ export const TarjetasCursosImagen = ({ArrayCursos}) => {
 
 
         {ArrayCursos.map((curso, index) => (
-          <div key={index} className="col-12 col-md-4 mb-5">
-            <div className="m-0 p-0 div-curso" style={{}}>
+          <div key={index} className="col-12 col-md-4 mb-5" style={{margin:"0 auto"}}>
+          {/* <div key={index} style={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", width:"250px"}} > */}
+            <div className="p-0 div-curso" style={{width:"250px", margin:"0 auto"}} >
               <Link
                 to={`${location.pathname}/${convertirASlug(curso.titulo)}`}
                 className="curso-preview"
@@ -40,7 +41,7 @@ export const TarjetasCursosImagen = ({ArrayCursos}) => {
                   ></div>
 
                   {/* Capa negra tipo viñeta */}
-                  <div className="curso-vignette"></div>
+                  {/* <div className="curso-vignette"></div> */}
 
                   {/* Nueva capa glassmorphism */}
                   <div className="glass-efecto"></div>

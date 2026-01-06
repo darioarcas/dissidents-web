@@ -14,11 +14,11 @@ const TituloDesplegable = ({informacion, alquiler=0}) => {
       { // Si NO fue llamado por Alquileres
         !alquiler ?
         <>
-          <h2  className="titulo py-2" style={{paddingLeft:"10px"}}>
+          <h2  className="titulo py-2" style={{paddingLeft:"10px", fontSize:"12px"}}>
             {informacion.titulo}
           </h2>
           <div className={`descripcion ${isVisible ? 'visible' : ''}`}>
-            <p>
+            <p style={{fontSize:"12px"}}>
               {informacion.descripcion}
             </p>
           </div>

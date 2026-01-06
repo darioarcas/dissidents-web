@@ -3,17 +3,17 @@
 
 
 import djAvanzado from "./img/galeria-dj-avanzado/dj-avanzado-1.png"; 
-import headerOnDemand from "./img/imgHeaderOnDemand.jpg";  
+import headerOnDemand from "./img/produ-inicial-samples.jpg";  
 import headerDjCdj from "./img/galeria-dj-cdj/imgHeader.webp";
 import headerDjTrktor from "./img/headerDjTraktor.jpg";
 import headerDjUrbano from "./img/headerDjUrbano.jpg";
-// import produccionInicial from "../produccion-musical/img/galeria-produccion-inicial/produccion-musical-1.jpg";
-// import produccionInicial2 from "../produccion-musical/img/galeria-produccion-inicial/curso-de-produccion-musical-electronica-con-ableton-inicial.webp";
+import produccionInicial from "./img/produ-inicial-samples.jpg";
+import produccionInicial2 from "./img/progressive-avanzado-fondo.jpg";
 // import produccionAvanzada from "../produccion-musical/img/galeria-produccion-avanzada/produccion-musical-avanzada-1.jpeg";
 // import mezclaYMaster from "../produccion-musical/img/galeria-mixing-mastering/mixing-mastering-1.avif";
 
-const produccionInicial = undefined;
-const produccionInicial2 = undefined;
+// const produccionInicial = undefined;
+// const produccionInicial2 = undefined;
 const produccionAvanzada = undefined;
 const mezclaYMaster = undefined;
 

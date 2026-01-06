@@ -90,7 +90,7 @@ export const AppRouter = () => {
                         }
                         {/* Definimos las rutas y sus respectivos componentes */}
                         <Route path="/" element={<Inicio />} />
-                        <Route path="/tutoriales" element={<Tutoriales />} />
+                        <Route path="/novedades" element={<Tutoriales />} />
                         <Route path="/videocursos" element={<Videocursos />} />
                         <Route path="/pago-exitoso" element={<PagoExitoso />} />
                         <Route path="/pago-fallido" element={<PagoFallido />} />

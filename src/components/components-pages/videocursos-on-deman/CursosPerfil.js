@@ -116,7 +116,7 @@ export const CursosPerfil = () => {
           ></div>
           <div className="overlay-img"></div>
           <div className="texto-header w-100 text-center text-white d-flex flex-column justify-content-center align-items-center h-100">
-            <h1 className="mb-2">{curso?.nombre}</h1>
+            <h1 style={{ textAlign: "center", fontSize:"20px", fontWeight:"700"}}>{curso?.nombre}</h1>
             <h1 className="fw-light mt-2 fs-6">{curso?.descripcion}</h1>
           </div>
         </header>
@@ -132,13 +132,13 @@ export const CursosPerfil = () => {
               width: "70%",
             }}
           >
-            <h1 className="titulo-body text-center">{curso?.tituloBody}</h1>
+            <h1 style={{ textAlign: "center", fontSize:"18px", fontWeight:"700", objectFit: "contain"}}>{curso?.tituloBody}</h1>
 
             {/* Mostramos la clase actual */}
             {claseParaMostrar ? (
               <div key={claseParaMostrar?.id} className="p-0" style={{ listStyle: "none", width: "100%" }}>
                 <li className="mb-4">
-                  <h4>{claseParaMostrar?.titulo}</h4>
+                  <h4 style={{fontSize:"16px", fontWeight:"300"}}>{paginaActual} - {claseParaMostrar?.titulo}</h4>
                   <p>{claseParaMostrar?.descripcion}</p>
                   <div
                     style={{
@@ -149,6 +149,21 @@ export const CursosPerfil = () => {
                       margin: "0 auto",
                     }}
                   >
+                    {/* Capa para bloquear el botón de "compartir", solo cubre una pequeña área */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1%", // Aproximadamente la posición vertical del botón
+                        right: "0", // Aproximadamente la posición horizontal del botón
+                        width: "80px", // Ancho de la zona que cubre el botón
+                        height: "20%", // Alto de la zona que cubre el botón
+                        backgroundColor: "rgba(255, 255, 255, 0)", // Transparente
+                        zIndex: 10, // Asegura que esté por encima del iframe
+                        pointerEvents: "all", // Bloquea la interacción solo en esta zona
+                      }}
+                    />
+                    
+                    {/* Iframe del video */}
                     <iframe
                       src={getEmbedUrl(claseParaMostrar.videoUrl)}
                       width="100%"
@@ -157,7 +172,7 @@ export const CursosPerfil = () => {
                       allow="autoplay; encrypted-media"
                       allowFullScreen
                       title={`Clase`}
-                      onContextMenu={(e) => e.preventDefault()}
+                      onContextMenu={(e) => e.preventDefault()} // Deshabilitar clic derecho
                     />
                   </div>
                 </li>
@@ -165,6 +180,7 @@ export const CursosPerfil = () => {
             ) : (
               <p>No hay clases disponibles</p>
             )}
+
 
             {/* Paginación */}
             <div className="paginacion mb-5">

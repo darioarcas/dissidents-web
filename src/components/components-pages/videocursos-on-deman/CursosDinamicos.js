@@ -9,6 +9,7 @@ import { db } from "../../../firebase/firebase";
 import TituloDesplegable from "../curso/titulo-desplegable/TituloDesplegable";
 import "./CursosDinamicos.css";
 import "../dj/DJ.css";
+import "./GlassFX.css";
 import { ArrayCursos } from '../dj/ArraysCursosOnDemand';
 // import mercadopagoLogo from './img/mercadopago.png';
 import ReactDOMServer from 'react-dom/server';
@@ -75,10 +76,10 @@ export const CursosDinamicos = () => {
 
 
   // Funcion boton para probar un pago desde mercdado pago
-    const probarPago = async () => {
+    const probarPago = async (tipo="") => {
         const user = firebase.auth().currentUser;
         if (!user) {
-            alert("Debes estar logueado para probar.");
+            alert("Debes estar logueado para Comprar.");
             return;
         }
 
@@ -103,8 +104,16 @@ export const CursosDinamicos = () => {
         try {
             // if(true)return;
             const token = await user.getIdToken();
+
+            const preferencia = [""];
+
+            if(tipo === "suscripcion"){
+                preferencia[0] = "create_subscription";
+            }else if(tipo === "pago"){
+                preferencia[0] = "create_preference";
+            }
             
-            const response = await fetch("https://backend-dissident.onrender.com/api/create_preference", {
+            const response = await fetch(`https://backend-dissident.onrender.com/api/${preferencia[0]}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -175,8 +184,9 @@ export const CursosDinamicos = () => {
                     className="position-relative" 
                     style={{
                         width: "100%",
-                        height: "300px",
+                        height: "150px",
                         position: "relative",
+                        marginTop:"80px",
                     }}
                 >
                     {/* Imagen de fondo en Header */}
@@ -192,7 +202,7 @@ export const CursosDinamicos = () => {
 
                     {/* Contenido encima */}
                     <div className="texto-header w-100 text-center text-white d-flex flex-column justify-content-center align-items-center h-100">
-                        <h1 className="mb-4 texto-xxl">{curso?.titulo}</h1>
+                        <h1 className="mb-4 fs-5 text-center pt-5 animate__animated animate__fadeInDown animate__slow">{curso?.titulo}</h1>
                         <h1 className="fw-normal mt-4 fs-6">{curso?.descripcion}</h1>
                     </div>
                 </header>
@@ -200,16 +210,20 @@ export const CursosDinamicos = () => {
 
 
                 <main>
+                    {/* imgSecundaria */}
                     {img3()}
+                    {/* img2 */}
                     {img2()}
                     {
                         curso?.img &&
-                        <img className="mx-auto d-block mt-5 pt-3 mb-4 w-75" src={curso?.img} alt="imagen del curso"/>
+                        <div className="animate__animated animate__fadeInDown animate__slow">
+                            <img className="mx-auto d-block mt-5 pt-3 mb-4 w-75 animate__animated animate__pulse animate__slower animate__infinite" style={{maxWidth:"800px"}} src={curso?.img} alt="imagen del curso"/>
+                        </div>
 
                     }
                     {/* <section className="contenedor-body"> */}
-                        <section className="contenedor-body">
-                            <h1 className="titulo-body text-center">{curso?.tituloBody}</h1>
+                        <section className="contenedor-body animate__animated animate__fadeInDown">
+                            <h1 className="titulo-body text-center" style={{fontSize:"16px"}}>{curso?.tituloBody}</h1>
                             <ul key={curso?.id}>
                                 {curso?.informacionCurso?.map((temario, index) =>{
                                     // return <li>{item}</li>
@@ -233,29 +247,42 @@ export const CursosDinamicos = () => {
                             })}
                         </ul>
                     </section>
-                    <section className="contenedor-body">
-                        <h4 className="text-center mb-4">
-                            $ 
-                            {
-                                cursoPublicos?.precio && !isNaN(cursoPublicos?.precio) 
-                                ? ` ${new Intl.NumberFormat('es-AR').format(cursoPublicos?.precio)} ARS` 
-                                : ""
-                            }
-                        </h4>
-                        {/* <p className="fw-bold mb-0 mt-2">{modulo.descripcion}</p>
-                        <p className="fw-semibold mt-0 p-0 text-secondary">{modulo.descripcion}</p> */}
-                        {/* <p className="fw-bold mb-0 mt-2">{curso?.modalidadYTurnos[0].turnos[0] && curso?.modalidadYTurnos[0].turnos[0].titulo}</p>
-                        <p className="fw-semibold mt-0 p-0 text-secondary">{curso?.modalidadYTurnos[0].turnos[0] && curso?.modalidadYTurnos[0].turnos[0].descripcion}</p> */}
-                    </section>
+
+
+                    <section className="contenedor-body d-flex justify-content-center align-items-center flex-column">
+                        <h1 className="animate__animated animate__fadeInDown animate__slow animate__infinite" style={{fontSize:"50px"}}>⬇</h1>
                         
-                    <div className="contenido-header mb-5">
-                        <button 
-                            className="btn btn-light"
-                            onClick={probarPago}
-                        >
-                            COMPRAR CURSO
-                        </button>
-                    </div>
+                        <div className="glass-effect mb-5" style={{width:"100%", maxWidth:"450px"}}>
+                            <h4 className="text-center mb-4">
+                                $ 
+                                {
+                                    cursoPublicos?.precio && !isNaN(cursoPublicos?.precio) 
+                                    ? ` ${new Intl.NumberFormat('es-AR').format(cursoPublicos?.precio)} ARS` 
+                                    : ""
+                                }
+                            </h4>
+                            <div className="contenido-header">
+                                <button 
+                                    className="btn btn-light"
+                                    onClick={probarPago("pago")}
+                                >
+                                    COMPRAR AHORA
+                                </button>
+                            </div>
+                            <div className="contenido-header">
+                                <button 
+                                    className="btn btn-light"
+                                    onClick={probarPago("suscripcion")}
+                                >
+                                    SUSCRIBIRME AHORA
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </section>
+
+
+                        
                 </main>
             </div>
 
