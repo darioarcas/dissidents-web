@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dissidents-web/static/css/main.1a9fece2.css",
-    "main.js": "/dissidents-web/static/js/main.a45f7f92.js",
+    "main.js": "/dissidents-web/static/js/main.3209601b.js",
     "static/media/duncan-kidd-89IypmbKhZI-unsplash.jpg": "/dissidents-web/static/media/duncan-kidd-89IypmbKhZI-unsplash.29d2da304f87b546da0a.jpg",
     "static/media/dj-cdj-1.jpg": "/dissidents-web/static/media/dj-cdj-1.b28bf470a5222b255c49.jpg",
     "static/media/dj-avanzado-2.JPG": "/dissidents-web/static/media/dj-avanzado-2.5162af0183399c70cc8e.JPG",
@@ -32,10 +32,10 @@
     "static/media/slick.ttf": "/dissidents-web/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/dissidents-web/static/media/slick.295183786cd8a1389865.woff",
     "main.1a9fece2.css.map": "/dissidents-web/static/css/main.1a9fece2.css.map",
-    "main.a45f7f92.js.map": "/dissidents-web/static/js/main.a45f7f92.js.map"
+    "main.3209601b.js.map": "/dissidents-web/static/js/main.3209601b.js.map"
   },
   "entrypoints": [
     "static/css/main.1a9fece2.css",
-    "static/js/main.a45f7f92.js"
+    "static/js/main.3209601b.js"
   ]
 }
