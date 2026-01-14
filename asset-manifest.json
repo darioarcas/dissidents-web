@@ -1,30 +1,16 @@
 {
   "files": {
     "main.css": "/dissidents-web/static/css/main.1a9fece2.css",
-    "main.js": "/dissidents-web/static/js/main.4d15e5c9.js",
+    "main.js": "/dissidents-web/static/js/main.5d6842e2.js",
     "static/media/duncan-kidd-89IypmbKhZI-unsplash.jpg": "/dissidents-web/static/media/duncan-kidd-89IypmbKhZI-unsplash.29d2da304f87b546da0a.jpg",
-    "static/media/dj-cdj-1.jpg": "/dissidents-web/static/media/dj-cdj-1.b28bf470a5222b255c49.jpg",
-    "static/media/dj-avanzado-2.JPG": "/dissidents-web/static/media/dj-avanzado-2.5162af0183399c70cc8e.JPG",
     "static/media/erwi-AJ3r-NL28PI-unsplash.jpg": "/dissidents-web/static/media/erwi-AJ3r-NL28PI-unsplash.90bdb41ea63e6e1bd1a2.jpg",
-    "static/media/headerDjTraktor.jpg": "/dissidents-web/static/media/headerDjTraktor.f5d276377de0ef0878f2.jpg",
     "static/media/fondo-baner-whatsapp.jpg": "/dissidents-web/static/media/fondo-baner-whatsapp.fe22526caaea26af2fe9.jpg",
-    "static/media/headerDjCdj.jpg": "/dissidents-web/static/media/headerDjCdj.8e487c9174955302ef76.jpg",
     "static/media/live.png": "/dissidents-web/static/media/live.798a5c043b17ea9433e9.png",
-    "static/media/headerDjUrbano.jpg": "/dissidents-web/static/media/headerDjUrbano.8806af871aed71741673.jpg",
-    "static/media/headerDjVinilos.jpg": "/dissidents-web/static/media/headerDjVinilos.b47998a7dfb93608d89e.jpg",
-    "static/media/dj-avanzado-1.png": "/dissidents-web/static/media/dj-avanzado-1.ea83a714f222c2ba7260.png",
-    "static/media/headerDjCdj2.jpg": "/dissidents-web/static/media/headerDjCdj2.3ccde2e1c0e638546be9.jpg",
-    "static/media/produ-inicial-samples.jpg": "/dissidents-web/static/media/produ-inicial-samples.d39a9280ed0293ac6fa3.jpg",
-    "static/media/imgHeader.webp": "/dissidents-web/static/media/imgHeader.27e96abe20f3bb33976c.webp",
     "static/media/produccion-inicial.jpg": "/dissidents-web/static/media/produccion-inicial.4a652442e2d33b238738.jpg",
     "static/media/fondo1.jpg": "/dissidents-web/static/media/fondo1.45f5b8ec225fbd1c5589.jpg",
     "static/media/inicio.jpg": "/dissidents-web/static/media/inicio.02095624bfc85081770d.jpg",
-    "static/media/dj-urbano.jpg": "/dissidents-web/static/media/dj-urbano.19c1f081c972a8235597.jpg",
-    "static/media/progressive-avanzado-fondo.jpg": "/dissidents-web/static/media/progressive-avanzado-fondo.c679bd69051c077af6ce.jpg",
     "static/media/LOGO NUEVO.png": "/dissidents-web/static/media/LOGO NUEVO.376f9df8c9edafc6c247.png",
-    "static/media/dj-traktor.jpg": "/dissidents-web/static/media/dj-traktor.f998a636281ee39a96b7.jpg",
     "static/media/mercadopago.png": "/dissidents-web/static/media/mercadopago.7a4702705cda5aa7cc82.png",
-    "static/media/dj-vinilos.jpeg": "/dissidents-web/static/media/dj-vinilos.91e575aa20acd8ef7ce4.jpeg",
     "static/media/dissidents-school-logo.png": "/dissidents-web/static/media/dissidents-school-logo.5c5cd780d3666e0fd188.png",
     "index.html": "/dissidents-web/index.html",
     "static/media/slick.svg": "/dissidents-web/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -32,10 +18,10 @@
     "static/media/slick.ttf": "/dissidents-web/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/dissidents-web/static/media/slick.295183786cd8a1389865.woff",
     "main.1a9fece2.css.map": "/dissidents-web/static/css/main.1a9fece2.css.map",
-    "main.4d15e5c9.js.map": "/dissidents-web/static/js/main.4d15e5c9.js.map"
+    "main.5d6842e2.js.map": "/dissidents-web/static/js/main.5d6842e2.js.map"
   },
   "entrypoints": [
     "static/css/main.1a9fece2.css",
-    "static/js/main.4d15e5c9.js"
+    "static/js/main.5d6842e2.js"
   ]
 }
