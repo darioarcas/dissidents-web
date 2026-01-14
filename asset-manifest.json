@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/dissidents-web/static/css/main.1a9fece2.css",
-    "main.js": "/dissidents-web/static/js/main.f87099e7.js",
+    "main.js": "/dissidents-web/static/js/main.a6fc54b2.js",
     "static/media/duncan-kidd-89IypmbKhZI-unsplash.jpg": "/dissidents-web/static/media/duncan-kidd-89IypmbKhZI-unsplash.29d2da304f87b546da0a.jpg",
+    "static/media/elijah-ekdahl-8bEjYHFhSUo-unsplash.jpg": "/dissidents-web/static/media/elijah-ekdahl-8bEjYHFhSUo-unsplash.9d6a4180eb69d0b1b5c2.jpg",
     "static/media/erwi-AJ3r-NL28PI-unsplash.jpg": "/dissidents-web/static/media/erwi-AJ3r-NL28PI-unsplash.90bdb41ea63e6e1bd1a2.jpg",
     "static/media/fondo-baner-whatsapp.jpg": "/dissidents-web/static/media/fondo-baner-whatsapp.fe22526caaea26af2fe9.jpg",
     "static/media/live.png": "/dissidents-web/static/media/live.798a5c043b17ea9433e9.png",
@@ -18,10 +19,10 @@
     "static/media/slick.ttf": "/dissidents-web/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/dissidents-web/static/media/slick.295183786cd8a1389865.woff",
     "main.1a9fece2.css.map": "/dissidents-web/static/css/main.1a9fece2.css.map",
-    "main.f87099e7.js.map": "/dissidents-web/static/js/main.f87099e7.js.map"
+    "main.a6fc54b2.js.map": "/dissidents-web/static/js/main.a6fc54b2.js.map"
   },
   "entrypoints": [
     "static/css/main.1a9fece2.css",
-    "static/js/main.f87099e7.js"
+    "static/js/main.a6fc54b2.js"
   ]
 }
