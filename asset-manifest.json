@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/dissidents-web/static/css/main.1a9fece2.css",
-    "main.js": "/dissidents-web/static/js/main.7995567d.js",
+    "main.js": "/dissidents-web/static/js/main.32d89196.js",
     "static/media/duncan-kidd-89IypmbKhZI-unsplash.jpg": "/dissidents-web/static/media/duncan-kidd-89IypmbKhZI-unsplash.29d2da304f87b546da0a.jpg",
     "static/media/techivation-a8QFpNkJojI-unsplash.jpg": "/dissidents-web/static/media/techivation-a8QFpNkJojI-unsplash.dc4865ffd752ccd63201.jpg",
+    "static/media/mezcla-y-masterizacion.jpg": "/dissidents-web/static/media/mezcla-y-masterizacion.56c31ac20a910a00506d.jpg",
     "static/media/elijah-ekdahl-8bEjYHFhSUo-unsplash.jpg": "/dissidents-web/static/media/elijah-ekdahl-8bEjYHFhSUo-unsplash.9d6a4180eb69d0b1b5c2.jpg",
     "static/media/erwi-AJ3r-NL28PI-unsplash.jpg": "/dissidents-web/static/media/erwi-AJ3r-NL28PI-unsplash.90bdb41ea63e6e1bd1a2.jpg",
     "static/media/fondo-baner-whatsapp.jpg": "/dissidents-web/static/media/fondo-baner-whatsapp.fe22526caaea26af2fe9.jpg",
@@ -20,10 +21,10 @@
     "static/media/slick.ttf": "/dissidents-web/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/dissidents-web/static/media/slick.295183786cd8a1389865.woff",
     "main.1a9fece2.css.map": "/dissidents-web/static/css/main.1a9fece2.css.map",
-    "main.7995567d.js.map": "/dissidents-web/static/js/main.7995567d.js.map"
+    "main.32d89196.js.map": "/dissidents-web/static/js/main.32d89196.js.map"
   },
   "entrypoints": [
     "static/css/main.1a9fece2.css",
-    "static/js/main.7995567d.js"
+    "static/js/main.32d89196.js"
   ]
 }
