@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dissidents-web/static/css/main.1a9fece2.css",
-    "main.js": "/dissidents-web/static/js/main.fbae3ab7.js",
+    "main.css": "/dissidents-web/static/css/main.42ed4480.css",
+    "main.js": "/dissidents-web/static/js/main.bcbf8eb3.js",
     "static/media/duncan-kidd-89IypmbKhZI-unsplash.jpg": "/dissidents-web/static/media/duncan-kidd-89IypmbKhZI-unsplash.29d2da304f87b546da0a.jpg",
     "static/media/techivation-a8QFpNkJojI-unsplash.jpg": "/dissidents-web/static/media/techivation-a8QFpNkJojI-unsplash.dc4865ffd752ccd63201.jpg",
     "static/media/mezcla-y-masterizacion.jpg": "/dissidents-web/static/media/mezcla-y-masterizacion.56c31ac20a910a00506d.jpg",
@@ -20,11 +20,11 @@
     "static/media/slick.eot": "/dissidents-web/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/dissidents-web/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/dissidents-web/static/media/slick.295183786cd8a1389865.woff",
-    "main.1a9fece2.css.map": "/dissidents-web/static/css/main.1a9fece2.css.map",
-    "main.fbae3ab7.js.map": "/dissidents-web/static/js/main.fbae3ab7.js.map"
+    "main.42ed4480.css.map": "/dissidents-web/static/css/main.42ed4480.css.map",
+    "main.bcbf8eb3.js.map": "/dissidents-web/static/js/main.bcbf8eb3.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a9fece2.css",
-    "static/js/main.fbae3ab7.js"
+    "static/css/main.42ed4480.css",
+    "static/js/main.bcbf8eb3.js"
   ]
 }
