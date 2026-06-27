@@ -58,6 +58,7 @@ const CarruselSlider = ({ cursos }) => {
 
       <motion.div
         className="carrusel-slide"
+        style={{height:"100%", width:"100%"}}
         key={currentIndex} // Cambiar el key para reiniciar la animación
         initial={{ opacity: 0, x: swipeDirection === 'left' ? 100 : -100 }} // Animación de entrada desde la izquierda o derecha
         animate={{ opacity: 1, x: 0 }}    // En su lugar
@@ -71,8 +72,17 @@ const CarruselSlider = ({ cursos }) => {
             alt={cursos[currentIndex].titulo}
             className="course-image"
           />
-          <h3 style={{ fontSize: '10px', fontWeight: '100', margin:"10px 0 0 0" }}>{cursos[currentIndex].titulo}</h3>
-          {/* <p>{cursos[currentIndex].descripcion}</p> */}
+          {/* <h3 style={{ fontSize: '10px', fontWeight: '100', margin:"10px 0 0 0" }}>{cursos[currentIndex].titulo}</h3> */}
+
+          {/* Nueva capa glassmorphism */}
+          <div className="glass-efecto"></div>
+
+          {/* Contenido encima */}
+          <div className="curso-contenido">
+            <h5 className="curso-titulo-slider">{cursos[currentIndex].titulo}</h5>
+            <h4 className="curso-descripcion-slider">{cursos[currentIndex].descipcion}</h4>
+          </div>
+
         </Link>
       </motion.div>
 

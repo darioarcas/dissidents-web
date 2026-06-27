@@ -1,10 +1,10 @@
-.carrusel-container {
+/* .carrusel-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 100%;  /* Aseguramos que el contenedor ocupe el 100% del ancho disponible */
-  }
+    width: 100%;
+  } */
   
   .carrusel {
     display: flex;

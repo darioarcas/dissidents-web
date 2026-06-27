@@ -25,15 +25,21 @@ import { Videocursos } from './components/components-pages/Videocursos';
 import CrearCursosPrivados from './components/helpers/CrearCursosPrivados';
 import CrearCursosPublicos from './components/helpers/CrearCursosPublicos';
 import {CursosDinamicos} from './components/components-pages/videocursos-on-deman/CursosDinamicos';
-import { PagoExitoso } from './components/components-pages/respuesta-pagos/pagoExitoso';
+import { SuscripcionEstado } from './components/components-pages/respuesta-pagos/SuscripcionEstado';
 import { PagoFallido } from './components/components-pages/respuesta-pagos/pagoFallido';
 import { CursosPerfil } from './components/components-pages/videocursos-on-deman/CursosPerfil';
+import { use } from 'react';
+import { Consejos } from './components/components-pages/videocursos-on-deman/Consejos';
+import CrearConsejos from './components/helpers/CrearConsejos';
+import SuscriptoresYUsuarios from './components/helpers/SuscriptoresYUsuarios';
+import { Precio } from './components/components-pages/Precio';
 
 
 
 
 export const AppRouter = () => {
     const dispatch = useDispatch();
+    const [suscripcionActiva, setSuscripcionActiva] = useState(null);
     const [checking, setChecking] = useState(true);
     const [isLoggedIn, setIsLoggedIn] = useState(null);
     // const mensaje = "Hola,%20quisiera%20saber%20sobre%20los%20cursos,%20precios%20y%20cupos%20disponibles.%20¡Muchas%20gracias!";  // Mensaje predefinido codificado
@@ -55,6 +61,10 @@ export const AppRouter = () => {
             dispatch(login(user.uid, user.displayName, user.email, user.photoURL));
             setIsLoggedIn(true);
 
+
+            // Obtener el estado de la suscripción al loguearse
+            getSubscriptionStatus(user.uid);
+
         } else {
             setIsLoggedIn(false);
         }
@@ -62,6 +72,26 @@ export const AppRouter = () => {
         });
     }, [dispatch]);
 
+
+
+
+    // Función para obtener el estado de la suscripción
+    const getSubscriptionStatus = (userId) => {
+        const userRef = firebase.firestore().collection('users').doc(userId);
+
+        userRef.onSnapshot((doc) => {
+            if (doc.exists) {
+            const userData = doc.data();
+            if (userData.suscripcionActiva) {
+                console.log("Suscripción activa hasta:", userData.suscripcionFechaVencimiento);
+                setSuscripcionActiva(true);
+            } else {
+                console.log("Suscripción no activa.");
+                setSuscripcionActiva(false);
+            }
+            }
+        });
+    };
 
 
 
@@ -82,6 +112,25 @@ export const AppRouter = () => {
                         <Menu/>
                     </div>
 
+                    {/* Mostrar el estado de la suscripción */}
+                    {/* <button
+                        type="button"
+                        className="btn btn-transparent"
+                        style={{
+                            color: 'white',
+                            marginTop: '80px',
+                            position: 'fixed',
+                            bottom: '50%',
+                            right: '70%',
+                            zIndex: '10',
+                            border: 'solid 2px white',
+                            borderRadius: '10px',
+                            padding: '5px',
+                            cursor: '',
+                        }}
+                    >
+                    Suscripción {suscripcionActiva !== null ? (suscripcionActiva ? 'Activa' : 'Inactiva') : 'Cargando...'}
+                    </button> */}
 
                     {/* RUTAS */}
                     <Routes>
@@ -91,16 +140,20 @@ export const AppRouter = () => {
                         {/* Definimos las rutas y sus respectivos componentes */}
                         <Route path="/" element={<Inicio />} />
                         <Route path="/novedades" element={<Tutoriales />} />
+                        <Route path="/precio" element={<Precio />} />
                         <Route path="/videocursos" element={<Videocursos />} />
-                        <Route path="/pago-exitoso" element={<PagoExitoso />} />
+                        <Route path="/consejos" element={<Consejos />} />
+                        <Route path="/suscripcion-estado" element={<SuscripcionEstado  handleLogout={handleLogout} checking={checking}  />} />
                         <Route path="/pago-fallido" element={<PagoFallido />} />
-                        <Route path="/videocursos/:slug" element={<CursosDinamicos />} />
+                        <Route path="/videocursos/:slug" element={<CursosDinamicos suscripcionActiva = {suscripcionActiva} handleLogout={handleLogout} />} />
                         <Route path="/perfil/videocursos/:slug" element={<CursosPerfil />} />
 
 
                         {/* Componente Temporal para crear Estructura de cursos en Firebase */}
                         <Route path="/crear-cursos-privados" element={<CrearCursosPrivados />} />
                         <Route path="/crear-cursos-publicos" element={<CrearCursosPublicos />} />
+                        <Route path="/crear-consejos" element={<CrearConsejos />} />
+                        <Route path="/suscriptores-y-usuarios" element={<SuscriptoresYUsuarios />} />
 
 
 
@@ -128,7 +181,7 @@ export const AppRouter = () => {
                         <Route path="/perfil" element={
                             <PrivateRoute isLoggedIn={isLoggedIn}
                             >
-                                <PerfilUsuario handleLogout={handleLogout} checking={checking}/>
+                                <PerfilUsuario handleLogout={handleLogout} checking={checking} suscripcionActiva = {suscripcionActiva} />
                             </PrivateRoute>
                         } />
 
@@ -150,6 +203,9 @@ export const AppRouter = () => {
 
 
                     {/* <button onClick={probarPago}>Probar conexión con backend</button> */}
+
+                    
+
                     
                 </div>
 

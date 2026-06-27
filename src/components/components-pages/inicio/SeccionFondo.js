@@ -26,7 +26,7 @@ const SeccionFondo = ({titulo="Titulo", contenido="Contenido", imagenFondo=""}) 
             {/* <div className='overlay-img3'> */}
             <div  style={{overflow:"hidden", padding:"0 10px"}}>
 
-                <h2 className="text-center h1-font-size-pc-responsive" style={{padding:"10px 3px"}}>{titulo}</h2>
+                <h2 className="text-center h1-font-size-pc-responsive" style={{padding:"10px 3px", margin:"0 0 20px 0"}}>{titulo}</h2>
                 <p className="z-4 lista">
                 {contenido}
                 </p>

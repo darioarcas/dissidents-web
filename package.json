@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://darioarcas.github.io/dissidents-web/",
   "dependencies": {
+    "@mercadopago/sdk-react": "^1.0.7",
     "@reduxjs/toolkit": "^2.5.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

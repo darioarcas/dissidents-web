@@ -32,3 +32,8 @@ deploy.ps1
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# Utilidades de desarrollo
+
+READMELOCAL.md

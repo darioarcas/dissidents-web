@@ -3,73 +3,30 @@
 import { db } from "../../firebase/firebase";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const CrearCursos = () => {
   const [cursosPrivados, setCursosPrivados] = useState([]);
-  const cursos = [
-  {
-        cursoId: "pDNPw6ufGVUIDK92bBHb",
-        nombre: "Curso de Mezcla y Masterizacion Incial",
-        descripcion: "",
-        precio:0,
-        imagen: "",
-      },
-  {
-        cursoId: "Ds4La90WmSxEzdyC3CuO",
-        nombre: "Curso de DJ Urbano Inicial",
-        descripcion: "",
-        precio:0,
-        imagen: "",
-      },
-  {
-        cursoId: "xU8cTi81WXJIAP4vZBrE",
-        nombre: "Curso de DJ con Traktor",
-        descripcion: "",
-        precio:0,
-        imagen: "",
-      },
-  {
-        cursoId: "nps0NwWeiM0iNSi0eJKG",
-        nombre: "Curso de DJ con CDJ Pioneer Avanzado",
-        descripcion: "",
-        precio:0,
-        imagen: "",
-      },
-  {
-        cursoId: "FtKt6g2fieCbOuqN64h8",
-        nombre: "Curso de Produccion Musical Electronica con Ableton Inicial",
-        descripcion: "",
-        precio:0,
-        imagen: "",
-      },
-  {
-        cursoId: "Rqs84SWXb9q0Q778zsnb",
-        nombre: "Curso de Produccion Musical Electronica con Ableton Avanzado",
-        descripcion: "",
-        precio:0,
-        imagen: "",
-      },
-  {
-        cursoId: "AZWe4N6HbE2KKM1XQiCC",
-        nombre: "Curso de DJ con CDJ Pioneer Inicial",
-        descripcion: "",
-        precio:0,
-        imagen: "",
-      },
-  {
-        cursoId: "M3FEyummGSJHiaqltt6s",
-        nombre: "Curso de Progressive Avanzado Intensivo con Ableton",
-        descripcion: "HOLAAAAAAAAA",
-        imagen: "",
-      },
-  {
-        cursoId: "e1NbdSjHO5q7QlVY3jlq",
-        nombre: "Curso de Produccion Musical Urbana con Ableton",
-        descripcion: "",
-        precio:0,
-        imagen: "",
-      }
-]
+  const curso = [
+    // PREPARACIÓN:
+    // Para agregar un curso nuevo, primero debes crear uno en cursos_privados en firestore
+    // Una vez hecho, leer los cursos con el boton "leer cursos privados", 
+    // copiar el id en firestore de ese curso y pegar en cursoId
+    // hacer lo mismo con el nombre, la descripcion (si tiene) y la imagen (si tiene)
+    // El precio no es necesario si preferis trabajar con suscripciones
+    // IMPORTANTE: Agregar el curso con el servidor en localhost, no en produccion
+
+    // SUBIR A FIRESTORE:
+    // Se añadira el curso a tus 
+    // cursos_publicos en firestore, sin borrar ningun curso que ya hubieses tenido de antemano
+    {
+      cursoId: "9VUgHiWmUwO4L9hWHF8r",
+      nombre: "Curso de Mezcla y Masterizacion",
+      descripcion: "",
+      precio:0,
+      imagen: "",
+    },
+  ]
 
   const generarTemario = (cantidad) => {
     const temario = [];
@@ -82,7 +39,78 @@ export const CrearCursos = () => {
     return temario;
   };
 
-  const crearCursosEnFirestore = async () => {
+  const crearCursosEnFirestore = async (cursosPrivados=[]) => {
+    if(cursosPrivados.length === 0){
+    // if(true){
+      alert(`No existen cursos que agregar: ${cursosPrivados}`)
+      return
+    }
+
+    try {
+      for (const curso of cursosPrivados) {//cursos) {
+        // Usamos add() para generar ID automático
+        await db.collection("cursos_publicos").add({
+          nombre: curso.nombre,
+          precio:curso.precio,
+          descripcion: curso.descripcion,
+          temario: generarTemario(16),
+          imagen: curso.imagen,
+          cursoId: curso.cursoId,
+        });
+        // console.log(`Curso creado: ${curso.nombre}`);
+        // alert( `✅ Curso creado: ${curso.nombre}`);
+        Swal.fire({
+          toast: true,
+          position: 'top-end',           // esquina superior derecha
+          icon: 'success',               // ícono de éxito
+          title: '✅ Curso creado: ' + curso.nombre,
+          showConfirmButton: false,      // sin botón de OK
+          timer: 5000,                   // 5 segundos
+          timerProgressBar: true,        // barra de tiempo
+          background: '#333',            // fondo oscuro
+          color: '#fff',                 // texto claro
+          iconColor: '#00e676',          // color del ícono
+          customClass: {
+            popup: 'small-toast'         // clase CSS personalizada (opcional)
+          }
+        });
+      }
+
+      setCursosPrivados([]); // Limpiar el estado después de crear los cursos
+
+      // alert("✅ Cursos creados correctamente en Firestore.");
+      Swal.fire({
+        toast: true,
+        position: 'top-end',           // esquina superior derecha
+        icon: 'success',               // ícono de éxito
+        title: "✅ Cursos creados correctamente en Firestore.",
+        showConfirmButton: false,      // sin botón de OK
+        timer: 3000,                   // 5 segundos
+        timerProgressBar: true,        // barra de tiempo
+        background: '#333',            // fondo oscuro
+        color: '#fff',                 // texto claro
+        iconColor: '#00e676',          // color del ícono
+        customClass: {
+          popup: 'small-toast'         // clase CSS personalizada (opcional)
+        }
+      });
+    } catch (error) {
+      console.error("❌ Error al crear cursos:", error);
+    }
+  };
+  
+  
+  
+  
+  
+  
+  const crearCursoUnicoEnFirestore = async (cursosPrivados=[]) => {
+    if(cursosPrivados.length === 0){
+    // if(true){
+      alert(`No existen cursos que agregar: ${cursosPrivados}`)
+      return
+    }
+
     try {
       for (const curso of cursosPrivados) {//cursos) {
         // Usamos add() para generar ID automático
@@ -214,15 +242,41 @@ export const CrearCursos = () => {
 
 
   return (
-    <div style={{ padding: "2rem" }}>
-      <h2>.</h2>
-      <h2>.</h2>
-      <h2>.</h2>
-      <h2>.</h2>
+    <div style={{ paddingTop: "90px", margin:"0 auto", width:"100%", display:"flex", justifyContent:"center", flexDirection:"column" }}>
 
-      <h2>PASO Nº 1: Leer cursos privados</h2>
-      <p>No hace falta copiar el array para generar la estructura en Firebase</p>
-      <button className="btn btn-primary" onClick={leerCursosPrivados}>Leer cursos privados</button>
+      <h1 style={{textAlign:"center", marginBottom:"50px"}}>Cursos Publicos</h1>
+
+
+            <hr style={{ margin: "2rem 0" }} />
+
+
+      <section style={{border:"solid 1px white", display:"flex", justifyContent:"center", flexDirection:"column", padding:"30px", width:"70%", margin:"0 auto 50px auto", borderRadius:"15px", backgroundColor:"#3b3b3b"}}>
+
+        <h2>Agregar curso Publico único</h2>
+        <p style={{margin:"0", padding:"0"}}>
+               Para agregar un curso nuevo, primero debes crear uno en cursos_privados en firestore.
+               Una vez hecho, leer los cursos con el boton "leer cursos privados", 
+               copiar el id en firestore de ese curso y pegar en cursoId
+               hacer lo mismo con los otros campos del objeto
+        </p>
+        <button 
+          className="btn btn-success"
+          onClick={()=>{crearCursoUnicoEnFirestore(curso)}} 
+          disabled={cursosPrivados.length === 0} 
+        >
+          Agregar curso
+        </button>
+      </section>
+
+
+
+      <h2 style={{textAlign:"center", width:"100%", margin:"0 auto", backgroundColor:"black", padding:"30px", borderRadius:"15px"}}>Crear Estructura desde Cero (implica borrar todos los cursos publicos, problemas futuros con los id)</h2>
+      
+      <section style={{border:"solid 1px white", display:"flex", justifyContent:"center", flexDirection:"column", padding:"30px", width:"70%", margin:"0 auto 50px auto", borderRadius:"15px", backgroundColor:"#3b3b3b"}}>
+        <h2>PASO Nº 1: Leer cursos privados</h2>
+        <p>No hace falta copiar el array para generar la estructura en Firebase</p>
+        <button className="btn btn-primary mx-auto" onClick={leerCursosPrivados}>Leer cursos privados</button>
+      </section>
 
 
 
@@ -258,15 +312,24 @@ export const CrearCursos = () => {
 
       <hr style={{ margin: "2rem 0" }} />
 
-      <h2>PASO Nº 2: Crear cursos en Firebase</h2>
-      <p>Asegurate de borrar la coleccion cursos_publicos de firebase para evitar datos duplicados</p>
-      <button 
-        className="btn btn-success"
-        onClick={crearCursosEnFirestore} 
-        disabled={cursosPrivados.length === 0} 
-      >
-        Crear estructura
-      </button>
+
+      <section style={{border:"solid 1px white", display:"flex", justifyContent:"center", flexDirection:"column", padding:"30px", width:"70%", margin:"0 auto 50px auto", borderRadius:"15px", backgroundColor:"#3b3b3b"}}>
+
+        <h2>PASO Nº 2: Crear cursos en Firebase</h2>
+        <p>Asegurate de borrar la coleccion cursos_publicos de firebase para evitar datos duplicados</p>
+        <button 
+          className="btn btn-success"
+          onClick={()=>{crearCursosEnFirestore(cursosPrivados)}} 
+          disabled={cursosPrivados.length === 0} 
+        >
+          Crear estructura
+        </button>
+      </section>
+
+
+      <Link to="/crear-cursos-privados" className="btn btn-success mx-auto my-5">
+        Ir a crear Cursos Privados
+      </Link>
 
 
 

@@ -1,10 +1,12 @@
-import { ArrayCursos } from "../dj/ArraysCursos";
+// import { ArrayCursos } from "../dj/ArraysCursos";
 import { ArrayProduccionMusical } from "./ArrayProduccionMusical";
 import { useParams } from 'react-router-dom';
 
 import '../dj/DJ.css';
 import TituloDesplegable from "./titulo-desplegable/TituloDesplegable";
 
+
+const ArrayCursos = [];
 
 export const Curso = () => {
     const { id } = useParams();  // Obtener el parámetro 'id' de la URL

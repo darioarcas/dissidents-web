@@ -3,9 +3,13 @@ import { useEffect, useState } from 'react';
 import "./videocursos-on-deman/CursosDinamicos.css";
 import './dj/DJ.css';
 // import { db } from "../../firebase/firebase";
-import { cursos, imgHeaderOnDemand } from './dj/ArraysDataBaseCursosOnDemand';
+// import { cursos, imgHeaderOnDemand } from './dj/ArraysDataBaseCursosOnDemand';
 import { TarjetasCursosImagen } from './dj/TarjetasCursosImagen';
 import AnimatedBackground2 from './videocursos-on-deman/AnimateBackground2';
+import { ArrayCursos } from './dj/ArraysCursosOnDemand';
+
+
+const cursos = ["",""];
 
 export const Videocursos = () => {
     const [cursosEncontrados, setCursosEncontrados] = useState([]);
@@ -15,7 +19,7 @@ export const Videocursos = () => {
     useEffect(() => {
         const cursosLeidos = cursos.map(doc => ({
             cursoId: doc.cursoId,
-            titulo: doc.nombre || "",
+            nombre: doc.nombre || "",
             descripcion: doc.descripcion || "",
             img:doc.img || "",
         }));
@@ -57,7 +61,7 @@ export const Videocursos = () => {
         <div className="content position-relative">
 
             <header
-                // className="position-relative" 
+                className="animate__animated animate__fadeIn animate__slow" 
                 // style={dynamicHeight()}
                 style={{
                     width: "100%",
@@ -116,7 +120,7 @@ export const Videocursos = () => {
                         </div>
                     </div>
                 ) : (
-                    <TarjetasCursosImagen ArrayCursos={cursosEncontrados} onDemand={true} inicio={true} />
+                    <TarjetasCursosImagen ArrayCursos={ArrayCursos} onDemand={true} inicio={true} />
                 )}
             </main>
         </div>

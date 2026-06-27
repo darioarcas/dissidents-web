@@ -6,6 +6,8 @@ import { useLocation } from 'react-router-dom';
 export const TarjetasCursosImagen = ({ArrayCursos}) => {
   const location = useLocation();
 
+  console.log("LOCATION:", location.pathname);
+
   const convertirASlug = (texto) => {
     return texto
       .normalize('NFD')                         // separa tildes de letras (ej: á → a + ́)
@@ -26,18 +28,19 @@ export const TarjetasCursosImagen = ({ArrayCursos}) => {
 
 
         {ArrayCursos.map((curso, index) => (
-          <div key={index} className="col-12 col-md-4 mb-5" style={{margin:"0 auto"}}>
+          <div key={index} className="animate__animated animate__fadeIn animate__slow col-12 col-md-4 mb-5" style={{margin:"0 auto"}}>
           {/* <div key={index} style={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", width:"250px"}} > */}
             <div className="p-0 div-curso" style={{width:"250px", margin:"0 auto"}} >
               <Link
-                to={`${location.pathname}/${convertirASlug(curso.titulo)}`}
+                // to={`${location.pathname}/${convertirASlug(curso.titulo)}`}
+                to={`/videocursos/${convertirASlug(curso?.nombre)}`}
                 className="curso-preview"
               >
                 <div className="curso-wrapper">
                   {/* Imagen de fondo */}
                   <div
                     className="curso-fondo"
-                    style={{ backgroundImage: `url(${curso.img})` }}
+                    style={{ backgroundImage: `url(${curso?.img})` }}
                   ></div>
 
                   {/* Capa negra tipo viñeta */}
@@ -48,7 +51,7 @@ export const TarjetasCursosImagen = ({ArrayCursos}) => {
 
                   {/* Contenido encima */}
                   <div className="curso-contenido">
-                    <h5 className="curso-titulo">{curso.titulo}</h5>
+                    <h5 className="curso-titulo">{curso?.nombre}</h5>
                     <h4 className="curso-vermas">Ver Más</h4>
                   </div>
                 </div>

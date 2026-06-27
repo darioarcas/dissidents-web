@@ -90,9 +90,9 @@ export const Inicio = () => {
     slidesToScroll: 1, // Número de elementos a desplazar por vez
     autoplay: true, // Autoplay activado
     autoplaySpeed: 4000, // Velocidad del autoplay
-    arrowPrev: <button className="carrusel-button prev">❮</button>, // Personaliza la flecha previa
-    nextArrow: <button className="carrusel-button next">❯</button>, // Personaliza la flecha siguiente
-    arrows: true, // Muestra las flechas de navegación
+    // arrowPrev: <button className="carrusel-button prev">❮</button>, // Personaliza la flecha previa
+    // nextArrow: <button className="carrusel-button next">❯</button>, // Personaliza la flecha siguiente
+    // arrows: true, // Muestra las flechas de navegación
   };
 
   return (
@@ -100,7 +100,7 @@ export const Inicio = () => {
 
       {/* Fondo con círculos animados */}
       {/* <div className="background-gradient position-fixed w-100 h-100 top-0 start-0 z-n1"></div> */}
-      {/* <AnimatedBackground2/> */}
+      <AnimatedBackground2/>
 
       <div className="content position-relative">
 
@@ -113,15 +113,15 @@ export const Inicio = () => {
 
           {/* Imagen de fondo en Header */}
           <div
-              className="background-img"
-              style={
-                {  
-                  backgroundImage: `url(${fondo1})`, 
-                  filter:"saturate(0)", 
-                  opacity:"0.5",
-                  zIndex:"-1",
-                }
-              }
+              // className="background-img"
+              // style={
+              //   {  
+              //     backgroundImage: `url(${fondo1})`, 
+              //     filter:"saturate(0)", 
+              //     opacity:"0.9",
+              //     zIndex:"-1",
+              //   }
+              // }
           ></div>
 
           {/* Overlay oscuro con opacidad al 10% */}
@@ -165,6 +165,7 @@ export const Inicio = () => {
         
           
           <SeccionFondo titulo={"Conoce todos nuestros cursos."} contenido={<Carrusel cursos={ArrayCursos} />}/>
+          
 
 
 
@@ -254,8 +255,9 @@ export const Inicio = () => {
 
 
 
-
-          <SeccionFondo titulo={"Novedades de Dissidents Records"} contenido={<YouTubePlaylist playlistId={'PLYafYnQmAYrvGshkeZpJdCD3ntI0fzUkX'} resultados={1} inicio={true}/>}/>
+          <div style={{margin:"0 0 80px 0"}}>
+            <SeccionFondo titulo={"Novedades de Dissidents Records"} contenido={<YouTubePlaylist playlistId={'PLYafYnQmAYrvGshkeZpJdCD3ntI0fzUkX'} resultados={1} inicio={true}/>}/>
+          </div>
 
 {/* 
           <div 
@@ -281,7 +283,7 @@ export const Inicio = () => {
           
           
           
-          <SeccionFondo 
+          {/* <SeccionFondo 
             titulo={"Unete a nuestra cuenta de Instagram"}          
             contenido={
               <div className="instagram-carousel"style={{position:"relative", top:"-100px", maxWidth:"380px", margin:"0 auto"}}>
@@ -298,7 +300,7 @@ export const Inicio = () => {
                 </Slider>
               </div>
             }
-          />
+          /> */}
           
           
           

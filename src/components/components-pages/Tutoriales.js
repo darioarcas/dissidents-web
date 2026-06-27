@@ -1,13 +1,16 @@
 // import headerTutoriales from './tutoriales/img/headerTutoriales.jpg';
 import './dj/DJ.css';
 import YouTubePlaylist from './tutoriales/img/YoutubePlaylist';
+import AnimatedBackground2 from './videocursos-on-deman/AnimateBackground2';
 
 export const Tutoriales = () => {
   return (
     <div className="app-wrapper position-relative">
 
         {/* Fondo con círculos animados */}
-        <div className="background-gradient position-fixed w-100 h-100 top-0 start-0 z-n1"></div>
+        {/* <div className="background-gradient position-fixed w-100 h-100 top-0 start-0 z-n1"></div> */}
+        <AnimatedBackground2/>
+
 
         <div className="content position-relative">
             <header  

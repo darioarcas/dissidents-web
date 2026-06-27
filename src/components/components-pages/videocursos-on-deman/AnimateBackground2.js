@@ -22,7 +22,8 @@ const createParticle = (forcedDelay = null, index) => {
     top,
     left,
     size,
-    color: `hsl(${hue}, ${saturation}%, ${lightness}%)`,
+    color: `hsl(${200 + Math.random() * 20}, 40%, ${20 + Math.random() * 80}%)`, // tonos azules suaves y variados. El porcentaje que esta a la mitad es la saturacion, y el ultimo porcentaje es la luminosidad, entre mas alto el numero mas claro el color. Al variar ambos se generan tonos pastel variados dentro de la gama de azules.
+    // color: `hsl(${hue}, ${saturation}%, ${lightness}%)`,
     duration: getRandom(15, 10),  // Aumentamos la duración para trayectorias más largas
     delay: forcedDelay !== null ? forcedDelay : getRandom(0, 5),
     speed,

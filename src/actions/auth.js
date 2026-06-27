@@ -39,7 +39,58 @@ export const startRegisterEmailPasswordName = (email, password, name)=>{
             .then(async({user}) => {
 
                 await user.updateProfile({displayName: name});
-                dispatch(login(user.uid, user.displayName, user.email));
+                // dispatch(login(user.uid, user.displayName, user.email));
+
+
+                const userRef = db.collection("users").doc(user.uid);
+                const docSnap = await userRef.get();
+
+                if (docSnap.exists) {
+                    const userData = docSnap.data();
+                    if (userData.isRegistered) {
+                        // El usuario existe, se procede a hacer el login
+                        dispatch(login(user.uid, user.displayName, user.email, user.photoURL, user.cursosComprados));
+                        return true;
+                    } else {
+                        // El usuario existe pero no estaba marcado como registrado
+                        await userRef.set({
+                            uid: user.uid,
+                            name: user.displayName,
+                            email: user.email,
+                            photoURL: user.photoURL,
+                            isRegistered: true,
+                            cursosComprados: [],
+                            suscripcionActiva: null,
+                            suscripcionFechaInicio: "",
+                            suscripcionFechaVencimiento: "",
+                            suscripcionId: "",
+                            ultimosTresVistos: [],
+                            contenidoFavorito: [],
+                            consejos: [],
+                        });
+                        dispatch(login(user.uid, user.displayName, user.email, user.photoURL, user.cursosComprados));
+                        Swal.fire("El Registro", "fue exitoso");
+                    }
+                } else {
+                    // El usuario no existe en Firestore, lo creamos
+                    await userRef.set({
+                        uid: user.uid,
+                        name: user.displayName,
+                        email: user.email,
+                        photoURL: user.photoURL,
+                        isRegistered: true,
+                        cursosComprados: [],                    
+                        suscripcionActiva: null,
+                        suscripcionFechaInicio: "",
+                        suscripcionFechaVencimiento: "",
+                        suscripcionId: "",
+                        ultimosTresVistos: [],
+                        contenidoFavorito: [],
+                        consejos: [],
+                    });
+                    dispatch(login(user.uid, user.displayName, user.email, user.photoURL));
+                    Swal.fire("El Registro", "fue exitoso");
+                }
 
             })
             .catch(e=>{ 
@@ -81,7 +132,14 @@ export const startGoogleLogin = () => {
                         email: user.email,
                         photoURL: user.photoURL,
                         isRegistered: true,
-                        cursosComprados: []
+                        cursosComprados: [],
+                        suscripcionActiva: null,
+                        suscripcionFechaInicio: "",
+                        suscripcionFechaVencimiento: "",
+                        suscripcionId: "",
+                        ultimosTresVistos: [],
+                        contenidoFavorito: [],
+                        consejos: [],
                     });
                     dispatch(login(user.uid, user.displayName, user.email, user.photoURL, user.cursosComprados));
                     Swal.fire("El Registro", "fue exitoso");
@@ -94,14 +152,21 @@ export const startGoogleLogin = () => {
                     email: user.email,
                     photoURL: user.photoURL,
                     isRegistered: true,
-                    cursosComprados: []
+                    cursosComprados: [],                    
+                    suscripcionActiva: null,
+                    suscripcionFechaInicio: "",
+                    suscripcionFechaVencimiento: "",
+                    suscripcionId: "",
+                    ultimosTresVistos: [],
+                    contenidoFavorito: [],
+                    consejos: [],
                 });
                 dispatch(login(user.uid, user.displayName, user.email, user.photoURL));
                 Swal.fire("El Registro", "fue exitoso");
             }
         } catch (error) {
-            console.error(error);
-            Swal.fire("Error", "Ocurrió un error con el Registro.", "error");
+            console.error("Ocurrió un error con el Registro:", error);
+            //Swal.fire("Error", "Ocurrió un error con el Registro.", "error");
             await firebase.auth().signOut();
         }
     };
@@ -174,7 +239,6 @@ export const fetchUserCoursesOnce = (uid) => async (dispatch) => {
   if (userDoc.exists) {
     const data = userDoc.data();
     const cursoIds = data.cursosComprados || [];
-
     const cursoPromises = cursoIds.map(async (cursoId) => {
       const cursoSnap = await db.collection("cursos_privados").doc(cursoId).get();
       return cursoSnap.exists

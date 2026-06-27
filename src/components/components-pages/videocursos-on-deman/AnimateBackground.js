@@ -11,7 +11,8 @@ const createCircle = (forcedDelay = null) => {
     top: getRandom(5, 95),
     left: getRandom(5, 95),
     size,
-    color: `hsl(${Math.floor(Math.random() * 360)}, 70%, 80%)`,
+    color: `hsl(${200 + Math.random() * 20}, 40%, ${20 + Math.random() * 100}%)`, // tonos azules suaves y variados. El porcentaje que esta a la mitad es la saturacion, y el ultimo porcentaje es la luminosidad, entre mas alto el numero mas claro el color. Al variar ambos se generan tonos pastel variados dentro de la gama de azules.
+    // color: `hsl(${Math.floor(Math.random() * 360)}, 70%, 80%)`, // colores pastel aleatorios
     // color: `white`,
     duration: getRandom(8, 32),
     delay: forcedDelay !== null ? forcedDelay : getRandom(1, 10), // default delay entre 2s y 10s

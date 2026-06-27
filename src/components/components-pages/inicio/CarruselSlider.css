@@ -70,9 +70,39 @@
 
 }
 
-.carrusel-container {
-  flex-direction: column;
+
+.curso-titulo-slider {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
+
+
+.curso-descripcion-slider {
+  font-size: 10px;
+  font-weight: 200;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Cambiá este número */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.curso-nombre-dashboard {
+  font-size: 8px;
+  font-weight: 200;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Cambiá este número */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* .carrusel-container {
+  flex-direction: column;
+} */
 @media (max-width: 768px) {
 
   .course-card {
@@ -94,12 +124,28 @@
 }
 @media(min-width: 720px){
   .course-card{
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-    .course-image {
-      width: 100%;
-      height: auto;
-    }
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .course-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .curso-titulo-slider {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+  }
+
+
+  .curso-descripcion-slider {
+    font-size: 14px;
+
+  }
+
+  .curso-nombre-dashboard {
+    font-size: 12px;
+    font-weight: 400;
+  }
 }

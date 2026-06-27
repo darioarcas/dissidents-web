@@ -1,5 +1,7 @@
 // src/app-router/Menu.js
 
+import { firebase, db } from "../firebase//firebase";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../components/components-pages/inicio/img/dissidents-school-logo.png';
 import { useSelector } from 'react-redux';
@@ -8,6 +10,25 @@ export const Menu = () => {
 
     const location = useLocation();
     const auth = useSelector(store=>{return store.auth});
+    const [suscripcionActiva, setSuscripcionActiva] = useState(false);
+    useEffect(() => {
+        if (!auth?.uid) {
+            setSuscripcionActiva(false);
+            return;
+        }
+
+        const unsub = db.collection("users")
+            .doc(auth.uid)
+            .onSnapshot(snap => {
+                if (snap.exists) {
+                    setSuscripcionActiva(snap.data().suscripcionActiva || false);
+                } else {
+                    setSuscripcionActiva(false);
+                }
+            });
+
+        return () => unsub();
+    }, [auth.uid]);
 
   return (
     <nav className="navbar fixed-top d-block m-0 p-0 ">
@@ -83,6 +104,48 @@ export const Menu = () => {
                     <Link className="nav-link w-100" to="/videocursos">
                         <li className="nav-item mx-2 py-3" data-bs-dismiss="offcanvas" aria-label="Close">
                                 <h6>Cursos</h6>
+                        </li>
+                    </Link>
+
+                    {
+                        (suscripcionActiva && auth?.uid) && // false &&//    
+                        
+                        <Link className="nav-link w-100" to="/consejos">
+                            <li className="nav-item mx-2 py-3" data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <div style={{position:"relative"}}>
+                                    <p style={{padding:"0", margin:"0"}}>CONSEJOS</p>
+                                    <span 
+                                    onClick={(e) => { e.stopPropagation(); }} 
+                                    style={{
+                                        position:"absolute",
+                                        cursor:"pointer",
+                                        top: "80%",
+                                        right: "0px",
+                                        fontSize:"10px",
+                                        height:"10px",
+                                        zIndex:22,
+                                        display:"flex",
+                                        alignItems:"center",
+                                        justifyContent:"center",
+                                        aspectRatio:"2s / 1",
+                                        padding:"5px",
+                                        borderRadius:"15px",
+                                        backgroundColor:"#3785fa",
+                                    }}
+                                    >
+                                    
+                                        <p style={{padding:"0", margin:"0"}}>nuevo</p>
+                                    </span>
+
+                                </div>
+                            </li>
+                        </Link>
+                    }
+
+
+                    <Link className="nav-link w-100" to="/precio">
+                        <li className="nav-item mx-2 py-3" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <h6>Precios</h6>
                         </li>
                     </Link>
 
