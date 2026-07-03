@@ -110,6 +110,7 @@ export const Precio = () => {
                     uid: user.uid,
                     base_url: base_url, // 👈 esto manda el dominio actual
                     email: user.email,
+                    name: user.displayName || "Usuario sin nombre",
                 }),
             });
 

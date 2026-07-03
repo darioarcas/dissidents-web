@@ -2,7 +2,7 @@
   "name": "dissidents-school",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://darioarcas.github.io/dissidents-web/",
+  "homepage": "https://dissidentsschool.com/",
   "dependencies": {
     "@mercadopago/sdk-react": "^1.0.7",
     "@reduxjs/toolkit": "^2.5.0",

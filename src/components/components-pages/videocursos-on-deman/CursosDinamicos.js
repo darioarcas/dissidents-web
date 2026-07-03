@@ -92,6 +92,7 @@ export const CursosDinamicos = ({suscripcionActiva = "no-cargo"}) => {
   // Funcion boton para probar un pago desde mercdado pago
     const probarPago = async (tipo="") => {
         const user = firebase.auth().currentUser;
+        
         if (!user) {
             alert("Debes estar logueado para Comprar.");
             return;
@@ -135,10 +136,11 @@ export const CursosDinamicos = ({suscripcionActiva = "no-cargo"}) => {
                 },
                 body: JSON.stringify({
                     cursoId: cursoPublicos?.cursoIdPay,// El id del curso en la coleccion de cursos privados
-                    cursoNombre: cursoPublicos?.nombre,
+                    cursoNombre: "Servicios de Dissidents School",//cursoPublicos?.nombre,
                     uid: user.uid,
                     base_url: base_url, // 👈 esto manda el dominio actual
                     email: user.email,
+                    name: user.displayName || "Usuario sin nombre",
                 }),
             });
 

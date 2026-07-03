@@ -5,7 +5,7 @@ import { TarjetasCursos } from '../../dj/TarjetasCursos';
 
 
 
-const YouTubePlaylist = ({ playlistId, resultados = 50, inicio=false}) => {
+const YouTubePlaylist = ({ playlistId, resultados = 10, inicio=false}) => {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
